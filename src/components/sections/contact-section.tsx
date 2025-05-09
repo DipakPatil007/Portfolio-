@@ -51,13 +51,13 @@ export default function ContactSection() {
   }
 
   return (
-    <section id="contact" className="w-full py-16 md:py-24 lg:py-32 bg-secondary/50">
+    <section id="contact" className="w-full scroll-mt-20 py-16 md:py-24 lg:py-32 bg-secondary/50">
       <div className="container mx-auto px-4 md:px-6">
         <h2 className="text-3xl font-bold tracking-tight text-center sm:text-4xl md:text-5xl mb-12">
           Get In Touch
         </h2>
         <div className="grid gap-12 lg:grid-cols-2">
-          <Card className="shadow-lg hover:shadow-xl transition-shadow duration-300 transform hover:-translate-y-1">
+          <Card className="shadow-lg hover:shadow-xl transition-all duration-300 ease-in-out transform hover:-translate-y-1.5 hover:scale-105">
             <CardHeader>
               <CardTitle className="text-2xl">Send me a message</CardTitle>
             </CardHeader>
@@ -125,7 +125,7 @@ export default function ContactSection() {
           </Card>
 
           <div className="space-y-8">
-            <Card className="shadow-lg hover:shadow-xl transition-shadow duration-300 transform hover:-translate-y-1">
+            <Card className="shadow-lg hover:shadow-xl transition-all duration-300 ease-in-out transform hover:-translate-y-1.5 hover:scale-105">
               <CardHeader>
                 <CardTitle className="text-2xl">Contact Information</CardTitle>
               </CardHeader>
@@ -157,7 +157,7 @@ export default function ContactSection() {
                 </div>
               </CardContent>
             </Card>
-             <Card className="shadow-lg hover:shadow-xl transition-shadow duration-300 transform hover:-translate-y-1">
+             <Card className="shadow-lg hover:shadow-xl transition-all duration-300 ease-in-out transform hover:-translate-y-1.5 hover:scale-105">
               <CardHeader>
                 <CardTitle className="text-2xl">Let&apos;s Connect</CardTitle>
               </CardHeader>

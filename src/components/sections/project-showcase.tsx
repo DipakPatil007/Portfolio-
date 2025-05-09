@@ -49,14 +49,14 @@ const projectsData: Project[] = [
 
 export default function ProjectShowcase() {
   return (
-    <section id="projects" className="w-full py-16 md:py-24 lg:py-32 bg-background">
+    <section id="projects" className="w-full scroll-mt-20 py-16 md:py-24 lg:py-32 bg-background">
       <div className="container mx-auto px-4 md:px-6">
         <h2 className="text-3xl font-bold tracking-tight text-center sm:text-4xl md:text-5xl mb-12">
           My Projects
         </h2>
         <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
           {projectsData.map((project) => (
-            <Card key={project.id} className="flex flex-col overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 transform hover:-translate-y-1">
+            <Card key={project.id} className="flex flex-col overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 ease-in-out transform hover:-translate-y-1.5 hover:scale-105">
               <div className="relative h-48 w-full">
                 <Image
                   src={project.imageUrl}

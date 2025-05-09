@@ -5,7 +5,7 @@ import Link from 'next/link';
 
 export default function HeroSection() {
   return (
-    <section id="hero" className="relative w-full py-20 md:py-32 lg:py-40 overflow-hidden">
+    <section id="hero" className="relative w-full scroll-mt-20 py-20 md:py-32 lg:py-40 overflow-hidden">
       {/* Parallax Background Image */}
       <Image
         src="https://picsum.photos/1920/1080"

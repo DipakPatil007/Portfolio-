@@ -45,24 +45,24 @@ body {
     --sidebar-ring: 174 62% 45%;
   }
   .dark {
-    --background: 212 13% 16%; /* Dark Navy Blue #24292F */
+    --background: 212 13% 10%; /* Even Darker Navy Blue for main background */
     --foreground: 210 17% 97%; /* Light Gray #F6F8FA */
-    --card: 212 13% 20%; /* Slightly Lighter Dark Navy */
+    --card: 212 13% 16%; /* Dark Navy Blue #24292F for cards */
     --card-foreground: 210 17% 97%; /* Light Gray #F6F8FA */
     --popover: 212 13% 12%; /* Darker Navy for popover */
     --popover-foreground: 210 17% 97%; /* Light Gray #F6F8FA */
-    --primary: 174 62% 40%; /* Teal #26A69A */
+    --primary: 174 62% 45%; /* Slightly brighter Teal for primary actions */
     --primary-foreground: 212 13% 10%; /* Very Dark Navy */
     --secondary: 212 13% 22%; /* Lighter Dark Navy */
     --secondary-foreground: 210 17% 97%; /* Light Gray #F6F8FA */
     --muted: 212 13% 25%; /* Muted Dark Navy */
-    --muted-foreground: 210 17% 70%; /* Muted Light Gray */
+    --muted-foreground: 210 17% 65%; /* Muted Light Gray - slightly brighter for better contrast */
     --accent: 174 62% 50%; /* Lighter Teal */
     --accent-foreground: 212 13% 10%; /* Very Dark Navy */
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 0 0% 98%;
-    --border: 212 13% 25%; /* Border Dark Navy */
-    --input: 212 13% 28%; /* Input Dark Navy */
+    --border: 212 13% 28%; /* Border Dark Navy - slightly lighter for subtle borders */
+    --input: 212 13% 22%; /* Input Dark Navy - same as secondary */
     --ring: 174 62% 50%; /* Lighter Teal for rings */
     --chart-1: 220 70% 50%;
     --chart-2: 160 60% 45%;
@@ -109,3 +109,51 @@ body {
 .animate-slow-zoom {
   animation: slow-zoom 20s ease-in-out infinite;
 }
+
+/* For the profile card in About section */
+.profile-card-hover {
+  transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.4s ease-out;
+}
+.profile-card-hover:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 20px 25px -5px rgba(var(--foreground-rgb), 0.1), 0 10px 10px -5px rgba(var(--foreground-rgb), 0.04);
+}
+
+/* General card hover effect for other cards */
+.card-interactive-hover {
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+.card-interactive-hover:hover {
+  transform: translateY(-5px) scale(1.03);
+}
+
+/* Timeline specific styles (if needed beyond Tailwind) */
+/* Example: ensure timeline connector lines are not too thick if using border utility */
+/* .timeline-connector { @apply w-0.5; } */
+/* Ensure dot text is centered if not already by flex utilities */
+/* .timeline-dot-text { @apply leading-none; } */
+
+/* Adding a subtle fade-in animation for sections */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.section-fade-in {
+  animation: fadeIn 0.8s ease-out forwards;
+  opacity: 0; /* Start hidden */
+}
+
+/* Staggered fade-in for items within a section */
+.stagger-fade-in > * {
+  opacity: 0;
+  animation: fadeIn 0.6s ease-out forwards;
+}
+/* Generate stagger delays using a utility or by hand if few items */
+/* Example for up to 5 items */
+.stagger-fade-in > *:nth-child(1) { animation-delay: 0.1s; }
+.stagger-fade-in > *:nth-child(2) { animation-delay: 0.2s; }
+.stagger-fade-in > *:nth-child(3) { animation-delay: 0.3s; }
+.stagger-fade-in > *:nth-child(4) { animation-delay: 0.4s; }
+.stagger-fade-in > *:nth-child(5) { animation-delay: 0.5s; }
+
