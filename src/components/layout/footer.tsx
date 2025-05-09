@@ -31,7 +31,7 @@ export default function Footer() {
     <footer className="border-t bg-background/80">
       <div className="container mx-auto flex flex-col items-center justify-between gap-4 px-4 py-8 sm:flex-row md:px-6">
         <p className="text-sm text-muted-foreground">
-          {currentYear !== null ? `© ${currentYear} Portfolio Ace. All rights reserved.` : '© Portfolio Ace. All rights reserved.'}
+          © {currentYear !== null && <>{currentYear} </>}Portfolio Ace. All rights reserved.
         </p>
         <div className="flex items-center gap-4">
           <SocialLink href="#" aria-label="Twitter profile">
