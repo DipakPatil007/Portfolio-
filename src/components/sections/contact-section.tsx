@@ -57,7 +57,7 @@ export default function ContactSection() {
           Get In Touch
         </h2>
         <div className="grid gap-12 lg:grid-cols-2">
-          <Card className="shadow-lg">
+          <Card className="shadow-lg hover:shadow-xl transition-shadow duration-300 transform hover:-translate-y-1">
             <CardHeader>
               <CardTitle className="text-2xl">Send me a message</CardTitle>
             </CardHeader>
@@ -116,7 +116,7 @@ export default function ContactSection() {
                       </FormItem>
                     )}
                   />
-                  <Button type="submit" size="lg" className="w-full shadow-md hover:shadow-lg transition-shadow">
+                  <Button type="submit" size="lg" className="w-full shadow-md hover:shadow-lg transition-shadow transform hover:-translate-y-0.5">
                     Send Message <Send className="ml-2 h-4 w-4" />
                   </Button>
                 </form>
@@ -125,7 +125,7 @@ export default function ContactSection() {
           </Card>
 
           <div className="space-y-8">
-            <Card className="shadow-lg">
+            <Card className="shadow-lg hover:shadow-xl transition-shadow duration-300 transform hover:-translate-y-1">
               <CardHeader>
                 <CardTitle className="text-2xl">Contact Information</CardTitle>
               </CardHeader>
@@ -157,7 +157,7 @@ export default function ContactSection() {
                 </div>
               </CardContent>
             </Card>
-             <Card className="shadow-lg">
+             <Card className="shadow-lg hover:shadow-xl transition-shadow duration-300 transform hover:-translate-y-1">
               <CardHeader>
                 <CardTitle className="text-2xl">Let&apos;s Connect</CardTitle>
               </CardHeader>

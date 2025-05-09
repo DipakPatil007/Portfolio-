@@ -100,3 +100,12 @@ body {
   --font-geist-sans: ${GeistSans.variable};
   /* --font-geist-mono: ${GeistMono.variable}; Removed as GeistMono is not imported */
 }
+
+@keyframes slow-zoom {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.03); }
+}
+
+.animate-slow-zoom {
+  animation: slow-zoom 20s ease-in-out infinite;
+}

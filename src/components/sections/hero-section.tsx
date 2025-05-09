@@ -13,7 +13,7 @@ export default function HeroSection() {
         layout="fill"
         objectFit="cover"
         quality={80}
-        className="absolute inset-0 z-0 opacity-30"
+        className="absolute inset-0 z-0 opacity-30 animate-slow-zoom"
         data-ai-hint="abstract background"
         priority
       />
