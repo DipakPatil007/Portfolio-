@@ -9,7 +9,7 @@ const navItems: NavItem[] = [
   { href: '#about', label: 'About' },
   { href: '#projects', label: 'Projects' },
   { href: '#contact', label: 'Contact' },
-  { href: '/theme-generator', label: 'Theme Generator' },
+  // Removed: { href: '/theme-generator', label: 'Theme Generator' },
 ];
 
 export default function Header() {

@@ -43,31 +43,3 @@ export interface NavItem {
   label: string;
   isExternal?: boolean;
 }
-
-export interface ThemeColors {
-  background?: string;
-  foreground?: string;
-  card?: string;
-  cardForeground?: string;
-  popover?: string;
-  popoverForeground?: string;
-  primary?: string;
-  primaryForeground?: string;
-  secondary?: string;
-  secondaryForeground?: string;
-  muted?: string;
-  mutedForeground?: string;
-  accent?: string;
-  accentForeground?: string;
-  destructive?: string;
-  destructiveForeground?: string;
-  border?: string;
-  input?: string;
-  ring?: string;
-}
-
-export interface AiThemeConfig {
-  light: ThemeColors;
-  dark: ThemeColors;
-  fontFamily?: string;
-}
