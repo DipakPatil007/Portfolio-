@@ -1,8 +1,8 @@
 import Image from 'next/image';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
-import type { Skill, Experience, Education } from '@/types';
-import { Code, Server, Palette, Database, Zap, Layers, ServerCog, Figma as FigmaIcon } from 'lucide-react';
+import type { Skill, Experience, Education, SkillCategory } from '@/types';
+import { Code, Server, Palette, Database, Zap, Layers, ServerCog, Smartphone, Settings, Coffee, Wind, Terminal, BarChartBig, Filter, Search, Flame, Network, Container, Anchor, Wrench, Github, Cloud, Gauge, AreaChart, Brain, Users, Lightbulb } from 'lucide-react';
 import type { LucideIcon } from 'lucide-react';
 import TimelineItemCard from '@/components/core/timeline-item-card';
 
@@ -24,30 +24,76 @@ const competenciesData: Competency[] = [
     description: 'Crafting seamless digital experiences from front-end UIs to back-end APIs, ensuring robust and scalable solutions across the entire stack.',
   },
   {
-    id: 'uiux',
-    title: 'UI/UX Design & Prototyping',
-    icon: Palette, 
-    description: 'Designing intuitive, engaging, and visually appealing user interfaces. Focusing on user-centered design principles to create delightful experiences.',
+    id: 'problem-solving',
+    title: 'Creative Problem-Solving',
+    icon: Lightbulb,
+    description: 'Analyzing complex challenges and devising innovative, effective solutions. I enjoy tackling puzzles and finding elegant answers to tough questions.',
   },
   {
-    id: 'api',
-    title: 'API & System Architecture',
-    icon: ServerCog,
-    description: 'Developing secure, efficient APIs and designing resilient system architectures that support complex applications and data flows.',
+    id: 'collaboration',
+    title: 'Team Collaboration',
+    icon: Users,
+    description: 'Working effectively within diverse teams, fostering a positive and productive environment. I believe strong communication is key to successful projects.',
   },
 ];
 
 
-const skillsData: Skill[] = [
-  { id: 'react', name: 'React', icon: Code },
-  { id: 'nextjs', name: 'Next.js', icon: Code },
-  { id: 'typescript', name: 'TypeScript', icon: Code },
-  { id: 'nodejs', name: 'Node.js', icon: Server },
-  { id: 'tailwind', name: 'Tailwind CSS', icon: Palette },
-  { id: 'figma', name: 'Figma', icon: FigmaIcon },
-  { id: 'postgres', name: 'PostgreSQL', icon: Database },
-  { id: 'prisma', name: 'Prisma', icon: Zap },
+const skillCategoriesData: SkillCategory[] = [
+  {
+    id: 'mobile',
+    name: 'Mobile',
+    icon: Smartphone,
+    skills: [
+      { id: 'flutter', name: 'Flutter', icon: Smartphone },
+      { id: 'reactnative', name: 'React Native', icon: Smartphone },
+      { id: 'java', name: 'Java', icon: Coffee },
+      { id: 'dart', name: 'Dart', icon: Smartphone },
+      { id: 'typescript_mobile', name: 'TypeScript', icon: Code },
+      { id: 'javascript_mobile', name: 'JavaScript', icon: Code },
+      { id: 'tailwind_mobile', name: 'Tailwind CSS', icon: Wind },
+    ],
+  },
+  {
+    id: 'backend',
+    name: 'Backend',
+    icon: Server,
+    skills: [
+      { id: 'go', name: 'Go', icon: Code },
+      { id: 'nodejs', name: 'Node.js', icon: Server },
+      { id: 'express', name: 'Express', icon: Code },
+      { id: 'nvim', name: 'Nvim', icon: Terminal },
+      { id: 'kibana', name: 'Kibana', icon: BarChartBig },
+      { id: 'logstash', name: 'Logstash', icon: Filter },
+      { id: 'elasticsearch', name: 'ElasticSearch', icon: Search },
+    ],
+  },
+  {
+    id: 'database',
+    name: 'Database',
+    icon: Database,
+    skills: [
+      { id: 'postgres', name: 'PostgreSQL', icon: Database },
+      { id: 'redis', name: 'Redis', icon: Database },
+      { id: 'firebase', name: 'Firebase', icon: Flame },
+      { id: 'kafka', name: 'Kafka', icon: Network },
+    ],
+  },
+  {
+    id: 'devops',
+    name: 'DevOps',
+    icon: Settings,
+    skills: [
+      { id: 'kubernetes', name: 'Kubernetes', icon: Container },
+      { id: 'helm', name: 'Helm', icon: Anchor },
+      { id: 'jenkins', name: 'Jenkins', icon: Wrench },
+      { id: 'githubactions', name: 'GitHub Actions', icon: Github },
+      { id: 'aws', name: 'AWS', icon: Cloud },
+      { id: 'prometheus', name: 'Prometheus', icon: Gauge },
+      { id: 'grafana', name: 'Grafana', icon: AreaChart },
+    ],
+  },
 ];
+
 
 const experienceData: Experience[] = [
   {
@@ -103,12 +149,12 @@ export default function AboutSection() {
   return (
     <section id="about" className="w-full scroll-mt-20 py-16 md:py-24 lg:py-32 bg-secondary/50">
       <div className="container mx-auto px-4 md:px-6">
-        <h2 className="text-3xl font-bold tracking-tight text-center sm:text-4xl md:text-5xl mb-16">
+        <h2 className="text-3xl font-bold tracking-tight text-center sm:text-4xl md:text-5xl mb-16 section-fade-in">
           About Me
         </h2>
 
         {/* Profile Image and Main Description */}
-        <div className="grid lg:grid-cols-5 gap-10 lg:gap-16 items-center mb-20 transform transition-all duration-500 ease-out hover:scale-[1.02]">
+        <div className="grid lg:grid-cols-5 gap-10 lg:gap-16 items-center mb-20 section-fade-in profile-card-hover">
           <div className="lg:col-span-2 flex justify-center lg:justify-start">
             <Image
               src="https://picsum.photos/seed/newportrait/350/400" 
@@ -130,9 +176,9 @@ export default function AboutSection() {
         </div>
 
         {/* What I Do Section */}
-        <div className="mb-20">
+        <div className="mb-20 section-fade-in">
           <h3 className="text-3xl font-bold text-center mb-12 text-foreground">What I Do</h3>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 stagger-fade-in">
             {competenciesData.map((competency) => (
               <Card key={competency.id} className="shadow-lg hover:shadow-xl transition-all duration-300 ease-in-out transform hover:-translate-y-2 hover:scale-105 bg-card">
                 <CardHeader className="items-center text-center">
@@ -147,42 +193,75 @@ export default function AboutSection() {
           </div>
         </div>
 
-        {/* Technologies I Work With Section */}
-        <div className="mb-20">
-          <h3 className="text-3xl font-bold text-center mb-12 text-foreground">Technologies I Work With</h3>
-          <div className="flex flex-wrap justify-center items-center gap-x-4 gap-y-4">
-            {skillsData.map((skill) => (
-              <Badge
-                key={skill.id}
-                variant="secondary"
-                className="text-base px-5 py-3 flex items-center gap-2.5 shadow-md hover:shadow-lg transition-all duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-105 cursor-default bg-card hover:bg-secondary/80 border-transparent"
-              >
-                {skill.icon && <skill.icon className="h-6 w-6 text-primary" />}
-                <span className="font-medium">{skill.name}</span>
-              </Badge>
+        {/* Technical Skills Section */}
+        <div className="mb-20 section-fade-in">
+          <h3 className="text-3xl font-bold text-center mb-4 text-foreground">
+            Technical <span className="text-accent">Skills</span>
+          </h3>
+          <p className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto">
+            I&apos;ve gained proficiency in various technologies throughout my career. Here are the key tools and frameworks I use to build exceptional products.
+          </p>
+          <div className="grid md:grid-cols-2 gap-8 stagger-fade-in">
+            {skillCategoriesData.map((category) => (
+              <Card key={category.id} className="shadow-lg hover:shadow-xl transition-all duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-[1.02] bg-card overflow-hidden">
+                <CardHeader className="flex flex-row items-center gap-3 space-y-0 pb-4">
+                  <category.icon className="h-7 w-7 text-accent" />
+                  <CardTitle className="text-xl font-semibold">{category.name}</CardTitle>
+                </CardHeader>
+                <CardContent className="flex flex-wrap gap-2 pt-0">
+                  {category.skills.map((skill) => (
+                    <Badge
+                      key={skill.id}
+                      variant="outline"
+                      className="px-3 py-1.5 text-sm flex items-center gap-2 border-primary/30 bg-primary/5 hover:bg-primary/10 transition-colors duration-200"
+                    >
+                      {skill.icon && <skill.icon className="h-4 w-4 text-accent" />}
+                      <span>{skill.name}</span>
+                    </Badge>
+                  ))}
+                </CardContent>
+              </Card>
             ))}
           </div>
         </div>
         
         {/* My Journey Section */}
-        <div>
+        <div className="section-fade-in">
           <h3 className="text-3xl font-bold text-center mb-16 text-foreground">My Journey</h3>
           
           {/* EDUCATION JOURNEY */}
           <div className="mb-20">
             <h4 className="text-2xl font-bold tracking-tight text-center sm:text-3xl mb-12 text-accent">
-              EDUCATION JOURNEY
+              EDUCATION
             </h4>
-            <div className="container mx-auto w-full max-w-4xl px-4">
+            <div className="relative container mx-auto w-full max-w-4xl px-4">
+              <div className="absolute left-1/2 top-0 bottom-0 w-1 bg-border/50 transform -translate-x-1/2 hidden md:block timeline-item-animate" style={{ animationDelay: '0.1s' }}></div>
               {educationData.map((edu, idx) => (
-                <TimelineItemCard
-                  key={edu.id}
-                  item={edu}
-                  type="education"
-                  index={idx + 1}
-                  totalItems={educationData.length}
-                  position={idx % 2 === 0 ? 'right' : 'left'}
-                />
+                <div key={edu.id} className={`mb-12 flex md:items-center w-full timeline-item-animate`} style={{ animationDelay: `${(idx * 0.2) + 0.2}s` }}>
+                  <div className={`w-full md:w-[calc(50%-2rem)] ${idx % 2 === 0 ? 'md:ml-auto md:pl-8 md:text-left' : 'md:mr-auto md:pr-8 md:text-right'}`}>
+                    <Card className="shadow-lg hover:shadow-2xl transition-all duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-[1.02] bg-card profile-card-hover">
+                       <CardHeader className={`pb-3 ${idx % 2 === 0 ? 'md:items-start' : 'md:items-end'}`}>
+                        <div className="flex items-center gap-3">
+                           {edu.logoUrl && (
+                            <Image src={edu.logoUrl} alt={`${edu.institution} logo`} width={32} height={32} className="rounded-sm border object-contain" data-ai-hint={edu.imageHint || "university logo"} />
+                          )}
+                          <CardTitle className="text-lg font-semibold">{edu.degree}</CardTitle>
+                        </div>
+                        <p className="text-sm text-muted-foreground">{edu.institution}</p>
+                        <Badge variant="secondary" className="text-xs">{edu.duration}</Badge>
+                      </CardHeader>
+                      <CardContent className={`${idx % 2 === 0 ? 'md:text-left' : 'md:text-right'}`}>
+                        {edu.description && <p className="text-sm text-muted-foreground">{edu.description}</p>}
+                      </CardContent>
+                    </Card>
+                  </div>
+                  <div className="hidden md:flex absolute left-1/2 transform -translate-x-1/2 w-10 h-10 bg-accent rounded-full items-center justify-center text-accent-foreground font-bold shadow-md">
+                    {idx + 1}
+                  </div>
+                   <div className="md:hidden flex-shrink-0 w-10 h-10 mr-4 bg-accent rounded-full flex items-center justify-center text-accent-foreground font-bold shadow-md">
+                    {idx + 1}
+                  </div>
+                </div>
               ))}
             </div>
           </div>
@@ -190,18 +269,38 @@ export default function AboutSection() {
           {/* EXPERIENCE JOURNEY */}
           <div>
             <h4 className="text-2xl font-bold tracking-tight text-center sm:text-3xl mb-12 text-accent">
-              EXPERIENCE JOURNEY
+              EXPERIENCE
             </h4>
-            <div className="container mx-auto w-full max-w-4xl px-4">
+             <div className="relative container mx-auto w-full max-w-4xl px-4">
+              <div className="absolute left-1/2 top-0 bottom-0 w-1 bg-border/50 transform -translate-x-1/2 hidden md:block timeline-item-animate" style={{ animationDelay: '0.1s' }}></div>
               {experienceData.map((exp, idx) => (
-                <TimelineItemCard
-                  key={exp.id}
-                  item={exp}
-                  type="experience"
-                  index={idx + 1}
-                  totalItems={experienceData.length}
-                  position={idx % 2 === 0 ? 'right' : 'left'}
-                />
+                <div key={exp.id} className={`mb-12 flex md:items-center w-full timeline-item-animate`} style={{ animationDelay: `${(idx * 0.2) + 0.2}s` }}>
+                  <div className={`w-full md:w-[calc(50%-2rem)] ${idx % 2 === 0 ? 'md:ml-auto md:pl-8 md:text-left' : 'md:mr-auto md:pr-8 md:text-right'}`}>
+                    <Card className="shadow-lg hover:shadow-2xl transition-all duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-[1.02] bg-card profile-card-hover">
+                       <CardHeader className={`pb-3 ${idx % 2 === 0 ? 'md:items-start' : 'md:items-end'}`}>
+                        <div className="flex items-center gap-3">
+                          {exp.logoUrl && (
+                            <Image src={exp.logoUrl} alt={`${exp.company} logo`} width={32} height={32} className="rounded-sm border object-contain" data-ai-hint={exp.imageHint || "company logo"}/>
+                          )}
+                          <CardTitle className="text-lg font-semibold">{exp.role}</CardTitle>
+                        </div>
+                        <p className="text-sm text-muted-foreground">{exp.company}</p>
+                        <Badge variant="secondary" className="text-xs">{exp.duration}</Badge>
+                      </CardHeader>
+                      <CardContent className={`${idx % 2 === 0 ? 'md:text-left' : 'md:text-right'}`}>
+                        <ul className="list-disc list-inside space-y-1 text-sm text-muted-foreground">
+                          {exp.descriptionPoints.map((point, i) => <li key={i}>{point}</li>)}
+                        </ul>
+                      </CardContent>
+                    </Card>
+                  </div>
+                  <div className="hidden md:flex absolute left-1/2 transform -translate-x-1/2 w-10 h-10 bg-accent rounded-full items-center justify-center text-accent-foreground font-bold shadow-md">
+                    {idx + 1}
+                  </div>
+                  <div className="md:hidden flex-shrink-0 w-10 h-10 mr-4 bg-accent rounded-full flex items-center justify-center text-accent-foreground font-bold shadow-md">
+                    {idx + 1}
+                  </div>
+                </div>
               ))}
             </div>
           </div>

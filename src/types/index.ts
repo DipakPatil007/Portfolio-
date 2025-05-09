@@ -1,4 +1,5 @@
 import type { LucideIcon } from 'lucide-react';
+import type React from 'react';
 
 export interface Project {
   id: string;
@@ -14,7 +15,7 @@ export interface Project {
 export interface Skill {
   id: string;
   name: string;
-  icon?: LucideIcon;
+  icon?: LucideIcon | React.FC<React.SVGProps<SVGSVGElement>>; // Allow custom SVGs or Lucide icons
   level?: number; // Optional: 0-100 for proficiency bar
 }
 
@@ -42,4 +43,11 @@ export interface NavItem {
   href: string;
   label: string;
   isExternal?: boolean;
+}
+
+export interface SkillCategory {
+  id: string;
+  name: string;
+  icon: LucideIcon;
+  skills: Skill[];
 }
