@@ -98,5 +98,5 @@ body {
 /* Add CSS variables for Geist fonts */
 :root {
   --font-geist-sans: ${GeistSans.variable};
-  --font-geist-mono: ${GeistMono.variable};
+  /* --font-geist-mono: ${GeistMono.variable}; Removed as GeistMono is not imported */
 }
