@@ -51,7 +51,7 @@ export default function ContactSection() {
   }
 
   return (
-    <section id="contact" className="w-full scroll-mt-20 py-16 md:py-24 lg:py-32 bg-secondary/50">
+    <section id="contact" className="w-full scroll-mt-20 py-16 md:py-24 lg:py-32">
       <div className="container mx-auto px-4 md:px-6">
         <h2 className="text-3xl font-bold tracking-tight text-center sm:text-4xl md:text-5xl mb-12">
           Get In Touch
