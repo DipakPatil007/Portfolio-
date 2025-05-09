@@ -89,7 +89,7 @@ export default function AboutSection() {
           </div>
 
           <div className="lg:col-span-2 space-y-12">
-            <Card className="shadow-lg">
+            <Card className="shadow-lg hover:shadow-xl transition-shadow duration-300 transform hover:-translate-y-1">
               <CardHeader>
                 <CardTitle className="flex items-center text-2xl">
                   <Zap className="mr-2 h-6 w-6 text-accent" /> Skills & Expertise
@@ -112,7 +112,7 @@ export default function AboutSection() {
             </Card>
 
             <div className="grid gap-8 md:grid-cols-2">
-              <Card className="shadow-lg">
+              <Card className="shadow-lg hover:shadow-xl transition-shadow duration-300 transform hover:-translate-y-1">
                 <CardHeader>
                   <CardTitle className="flex items-center text-2xl">
                     <Briefcase className="mr-2 h-6 w-6 text-accent" /> Experience
@@ -144,7 +144,7 @@ export default function AboutSection() {
                 </CardContent>
               </Card>
 
-              <Card className="shadow-lg">
+              <Card className="shadow-lg hover:shadow-xl transition-shadow duration-300 transform hover:-translate-y-1">
                 <CardHeader>
                   <CardTitle className="flex items-center text-2xl">
                     <GraduationCap className="mr-2 h-6 w-6 text-accent" /> Education
