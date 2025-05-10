@@ -4,10 +4,10 @@ import { Badge } from '@/components/ui/badge';
 import type { Skill, Experience, Education, SkillCategory } from '@/types';
 import { Code, Server, Palette, Database, Zap, Layers, ServerCog, Smartphone, Settings, Coffee, Wind, Terminal, BarChartBig, Filter, Search, Flame, Network, Container, Anchor, Wrench, Github, Cloud, Gauge, AreaChart, Brain, Users, Lightbulb } from 'lucide-react';
 import type { LucideIcon } from 'lucide-react';
-import TimelineItemCard from '@/components/core/timeline-item-card';
+// import TimelineItemCard from '@/components/core/timeline-item-card';
 
 
-const newIntroParagraph = "I'm John Doe, a dedicated Full-Stack Developer with a passion for crafting innovative and user-centric digital solutions. My journey in technology is driven by a constant curiosity and a desire to solve complex problems with elegant and efficient code. I thrive in collaborative environments, transforming ideas into tangible products that not only meet user needs but also exceed expectations. With a strong foundation in both front-end and back-end technologies, I'm committed to continuous learning and staying at the forefront of industry trends to deliver high-quality software.";
+const newIntroParagraph = "I'm Dipak Patil, a dedicated Full-Stack Developer with a passion for crafting innovative and user-centric digital solutions. My journey in technology is driven by a constant curiosity and a desire to solve complex problems with elegant and efficient code. I thrive in collaborative environments, transforming ideas into tangible products that not only meet user needs but also exceed expectations. With a strong foundation in both front-end and back-end technologies, I'm committed to continuous learning and staying at the forefront of industry trends to deliver high-quality software.";
 
 interface Competency {
   id: string;
@@ -24,6 +24,12 @@ const competenciesData: Competency[] = [
     description: 'Crafting seamless digital experiences from front-end UIs to back-end APIs, ensuring robust and scalable solutions across the entire stack.',
   },
   {
+    id: 'mobile-app',
+    title: 'Mobile Application Development',
+    icon: Smartphone,
+    description: 'Crafting amazing application that ensuring robust and scalable solutions across the entire stack.',
+  },
+  {
     id: 'problem-solving',
     title: 'Creative Problem-Solving',
     icon: Lightbulb,
@@ -37,19 +43,33 @@ const competenciesData: Competency[] = [
   },
 ];
 
-
 const skillCategoriesData: SkillCategory[] = [
   {
     id: 'mobile',
     name: 'Mobile',
     icon: Smartphone,
     skills: [
-      { id: 'flutter', name: 'Flutter', icon: Smartphone },
+      { id: 'iOS', name: 'iOS Apps', icon: Smartphone },
+      { id: 'android', name: 'Android', icon: Smartphone },
       { id: 'reactnative', name: 'React Native', icon: Smartphone },
-      { id: 'java', name: 'Java', icon: Coffee },
-      { id: 'dart', name: 'Dart', icon: Smartphone },
+      { id: 'swift', name: 'Swift', icon: Coffee },
+      { id: 'swiftUI', name: 'SwiftUI', icon: Coffee },
+      { id: 'java', name: 'Java', icon: Smartphone },
       { id: 'typescript_mobile', name: 'TypeScript', icon: Code },
       { id: 'javascript_mobile', name: 'JavaScript', icon: Code },
+      { id: 'tailwind_mobile', name: 'Tailwind CSS', icon: Wind },
+    ],
+  },
+  {
+    id: 'frontend',
+    name: 'Front End',
+    icon: Smartphone,
+    skills: [
+      { id: 'Html', name: 'Html/css/js', icon: Smartphone },
+      { id: 'react', name: 'React', icon: Smartphone },
+      { id: 'typescript', name: 'TypeScript', icon: Code },
+      { id: 'javascript', name: 'JavaScript', icon: Code },
+      { id: 'bootstrap', name: 'Bootstrap', icon: Wind },
       { id: 'tailwind_mobile', name: 'Tailwind CSS', icon: Wind },
     ],
   },
@@ -58,13 +78,8 @@ const skillCategoriesData: SkillCategory[] = [
     name: 'Backend',
     icon: Server,
     skills: [
-      { id: 'go', name: 'Go', icon: Code },
       { id: 'nodejs', name: 'Node.js', icon: Server },
-      { id: 'express', name: 'Express', icon: Code },
-      { id: 'nvim', name: 'Nvim', icon: Terminal },
-      { id: 'kibana', name: 'Kibana', icon: BarChartBig },
-      { id: 'logstash', name: 'Logstash', icon: Filter },
-      { id: 'elasticsearch', name: 'ElasticSearch', icon: Search },
+      { id: 'express', name: 'Express', icon: Code }
     ],
   },
   {
@@ -72,10 +87,11 @@ const skillCategoriesData: SkillCategory[] = [
     name: 'Database',
     icon: Database,
     skills: [
-      { id: 'postgres', name: 'PostgreSQL', icon: Database },
-      { id: 'redis', name: 'Redis', icon: Database },
-      { id: 'firebase', name: 'Firebase', icon: Flame },
-      { id: 'kafka', name: 'Kafka', icon: Network },
+      { id: 'sql', name: 'SQL', icon: Database },
+      { id: 'nosql', name: 'NoSQL', icon: Database },
+      { id: 'firebase', name: 'Firebase', icon: Database },
+      { id: 'Mongo', name: 'MongoDB', icon: Database },
+      { id:'sqlite', name:'SQLite', icon: Database }
     ],
   },
   {
@@ -94,53 +110,53 @@ const skillCategoriesData: SkillCategory[] = [
   },
 ];
 
-
 const experienceData: Experience[] = [
   {
     id: 'exp1',
-    role: 'Senior Software Engineer',
-    company: 'Tech Solutions Inc.',
-    duration: 'Jan 2021 - Present',
-    logoUrl: 'https://picsum.photos/40/40?grayscale&seed=techinc',
-    imageHint: 'company logo tech',
+    role: 'Software Engineer',
+    company: 'Aress Softwarre',
+    duration: 'Aug 2023 - Present',
+    logoUrl: '',
+    imageHint: 'company logo web',
     descriptionPoints: [
-      'Led development of key features for a SaaS platform.',
-      'Mentored junior developers and conducted code reviews.',
-      'Improved application performance by 20% through optimizations.',
+      'Developed and maintained client iOS application using Swift and SwiftUI',
+      'Collaborated with designers to implement responsive UIs by utilizing the autolayout',
+      'Integrated third-party APIs for enhanced functionality.',
+      'Integrated push notification'
     ],
   },
   {
     id: 'exp2',
-    role: 'Full-Stack Developer',
-    company: 'Web Innovators LLC',
-    duration: 'Jun 2018 - Dec 2020',
-    logoUrl: 'https://picsum.photos/40/40?grayscale&seed=webinnov',
-    imageHint: 'company logo web',
+    role: 'Web developer Intern',
+    company: 'LetGrowMore',
+    duration: 'Jan 2022 - March 2022',
+    logoUrl: 'https://picsum.photos/40/40?grayscale&seed=techinc',
+    imageHint: 'company logo tech',
     descriptionPoints: [
       'Developed and maintained client websites using React and Node.js.',
       'Collaborated with designers to implement responsive UIs.',
-      'Integrated third-party APIs for enhanced functionality.',
+      'Integrated third-party APIs for enhanced functionality',
     ],
-  },
+  }
 ];
 
 const educationData: Education[] = [
   {
     id: 'edu1',
-    degree: 'M.S. in Computer Science',
-    institution: 'University of Advanced Technology',
-    duration: '2016 - 2018',
-    logoUrl: 'https://picsum.photos/40/40?grayscale&seed=uat',
-    imageHint: 'university logo UAT',
-    description: 'Focused on software engineering and machine learning.',
+    degree: 'B.E in Computer Engineering',
+    institution: 'Savitribai Phule Pune University',
+    duration: '2019 - 2023',
+    logoUrl: '',
+    imageHint: 'university logo',
+    description: 'Focused on fundamentals of computers engineering and software engineering ',
   },
   {
     id: 'edu2',
-    degree: 'B.S. in Information Technology',
-    institution: 'State College',
-    duration: '2012 - 2016',
+    degree: 'High School',
+    institution: 'RSSPM\'S NANASAHEB YASHAVANTRAO N.CHAVAN ARTS,SCIENCE&COMMERCE COLLEGE,CHALISGAON',
+    duration: '2017 - 2019',
     logoUrl: 'https://picsum.photos/40/40?grayscale&seed=statecol',
-    imageHint: 'university logo state',
+    imageHint: 'High school',
     description: 'Graduated with honors, active in coding club.',
   },
 ];
@@ -158,7 +174,7 @@ export default function AboutSection() {
           <div className="lg:col-span-2 flex justify-center lg:justify-start">
             <Image
               src="https://picsum.photos/seed/newportrait/350/400" 
-              alt="John Doe - Profile Picture"
+              alt="Dipak Patil - Profile Picture"
               width={350}
               height={400}
               className="rounded-xl shadow-2xl object-cover"
@@ -167,7 +183,7 @@ export default function AboutSection() {
           </div>
           <div className="lg:col-span-3">
             <h3 className="text-2xl font-semibold mb-4 text-accent">A Bit About Me</h3>
-            <div className="space-y-4 text-muted-foreground text-lg">
+            <div className="space-y-4 text-muted-foreground text-lg p-4">
                 {newIntroParagraph.split('\n\n').map((paragraph, index) => (
                     <p key={index}>{paragraph}</p>
                 ))}

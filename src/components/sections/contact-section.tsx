@@ -71,7 +71,7 @@ export default function ContactSection() {
                       <FormItem>
                         <FormLabel>Full Name</FormLabel>
                         <FormControl>
-                          <Input placeholder="John Doe" {...field} />
+                          <Input placeholder="Dipak Patil" {...field} />
                         </FormControl>
                         <FormMessage />
                       </FormItem>
@@ -84,7 +84,7 @@ export default function ContactSection() {
                       <FormItem>
                         <FormLabel>Email Address</FormLabel>
                         <FormControl>
-                          <Input type="email" placeholder="john.doe@example.com" {...field} />
+                          <Input type="email" placeholder="user@example.com" {...field} />
                         </FormControl>
                         <FormMessage />
                       </FormItem>
@@ -135,7 +135,7 @@ export default function ContactSection() {
                   <div>
                     <h3 className="font-semibold">Email</h3>
                     <a href="mailto:john.doe@example.com" className="text-muted-foreground hover:text-foreground transition-colors">
-                      john.doe@example.com
+                      Dipakpa2018@gmail.com
                     </a>
                   </div>
                 </div>
@@ -144,7 +144,7 @@ export default function ContactSection() {
                   <div>
                     <h3 className="font-semibold">Phone</h3>
                     <a href="tel:+1234567890" className="text-muted-foreground hover:text-foreground transition-colors">
-                      +1 (234) 567-890
+                      +91 8999729915
                     </a>
                   </div>
                 </div>
@@ -152,7 +152,7 @@ export default function ContactSection() {
                   <MapPin className="h-6 w-6 text-accent" />
                   <div>
                     <h3 className="font-semibold">Location</h3>
-                    <p className="text-muted-foreground">San Francisco, CA</p>
+                    <p className="text-muted-foreground">Nashik, Maharastra</p>
                   </div>
                 </div>
               </CardContent>

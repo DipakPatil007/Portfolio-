@@ -17,10 +17,10 @@ export default function HeroSection() {
               Hi! <span role="img" aria-label="waving hand">👋</span>
             </p>
             <h1 className="mt-2 text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight leading-tight animate-fadeIn" style={{animationDelay: '0.4s'}}>
-              I&apos;m <span className="text-accent">John Doe</span>,
+              I&apos;m <span className="text-accent">Dipak Patil</span>,
             </h1>
             <p className="mt-6 text-lg md:text-xl text-muted-foreground max-w-xl mx-auto lg:mx-0 animate-fadeIn" style={{animationDelay: '0.6s'}}>
-              A Full-Stack Developer & UI/UX Enthusiast, who loves intuitive, clean and modern technologies.
+              A Full-Stack Developer & Mobile Application developer, who loves intuitive, clean and modern technologies.
             </p>
             <div className="mt-10 flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 animate-fadeIn" style={{animationDelay: '0.8s'}}>
               <Link href="#contact" passHref>
