@@ -29,7 +29,7 @@ export default function Footer() {
 
   return (
     <footer className="border-t bg-background/80">
-      <div className="container mx-auto flex flex-col items-center justify-between gap-4 px-4 py-8 sm:flex-row md:px-6">
+      <div className="container mx-auto max-w-5xl flex flex-col items-center justify-between gap-4 px-4 py-8 sm:flex-row md:px-6">
         <p className="text-sm text-muted-foreground">
           © {currentYear !== null && <>{currentYear} </>}Dipak Patil. All rights reserved.
         </p>
@@ -48,3 +48,4 @@ export default function Footer() {
     </footer>
   );
 }
+

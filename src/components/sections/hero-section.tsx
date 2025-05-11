@@ -1,5 +1,5 @@
 import { Button } from '@/components/ui/button';
-import { FileText, ArrowDown } from 'lucide-react';
+import { FileText } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
 
@@ -9,7 +9,7 @@ export default function HeroSection() {
       id="hero" 
       className="relative w-full scroll-mt-16 bg-grid-pattern-hero overflow-hidden"
     >
-      <div className="container mx-auto px-4 md:px-6">
+      <div className="container mx-auto max-w-5xl px-4 md:px-6">
         <div className="flex flex-col lg:flex-row items-center justify-between min-h-[calc(100vh-4rem)] py-12 md:py-20 lg:py-0">
           
           {/* Left Column: Text and Buttons */}
@@ -55,17 +55,15 @@ export default function HeroSection() {
                 alt="John Doe - Professional"
                 width={500} 
                 height={500}
-                className="rounded-full object-cover shadow-2xl border-[0.25rem] border-card animate-float"
+                className="rounded-full object-cover shadow-2xl border-[0.25rem] border-card animate-float hero-image-glow"
                 data-ai-hint="professional portrait illustration"
                 priority
               />
-               <div className="absolute inset-0 rounded-full border-[0.25rem] border-accent/30 animate-pulse"></div>
             </div>
           </div>
         </div>
       </div>
-      
-      {/* Scroll Down Hint - removed as per user request to remove chevron down */}
     </section>
   );
 }
+

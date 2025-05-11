@@ -164,7 +164,7 @@ const educationData: Education[] = [
 export default function AboutSection() {
   return (
     <section id="about" className="w-full scroll-mt-20 py-16 md:py-24 lg:py-32 bg-secondary/50">
-      <div className="container mx-auto px-4 md:px-6">
+      <div className="container mx-auto max-w-5xl px-4 md:px-6">
         <h2 className="text-3xl font-bold tracking-tight text-center sm:text-4xl md:text-5xl mb-16 section-fade-in">
           About Me
         </h2>
@@ -219,7 +219,7 @@ export default function AboutSection() {
           </p>
           <div className="grid md:grid-cols-2 gap-8 stagger-fade-in">
             {skillCategoriesData.map((category) => (
-              <Card key={category.id} className="shadow-lg bg-card overflow-hidden">
+              <Card key={category.id} className="shadow-lg bg-card overflow-hidden card-interactive-hover">
                 <CardHeader className="flex flex-row items-center gap-3 space-y-0 pb-4">
                   <category.icon className="h-7 w-7 text-accent" />
                   <CardTitle className="text-xl font-semibold">{category.name}</CardTitle>
