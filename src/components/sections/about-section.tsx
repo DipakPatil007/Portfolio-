@@ -2,7 +2,7 @@ import Image from 'next/image';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import type { Skill, Experience, Education, SkillCategory } from '@/types';
-import { Layers, Lightbulb, Users, Smartphone, Coffee, Code, Wind, Terminal, BarChartBig, Filter, Search, Server, Flame, Network, Database, Container, Anchor, Wrench, Github, Cloud, Gauge, AreaChart, Brain, TestTubeDiagonal, Settings} from 'lucide-react';
+import { Layers, Lightbulb, Users, Smartphone, Code, Wind, Terminal, Server, Network, Database, Container, Anchor, Wrench, Github, Cloud, Gauge, AreaChart, Brain, TestTubeDiagonal, Settings, Flame} from 'lucide-react';
 import type { LucideIcon } from 'lucide-react';
 
 
@@ -46,16 +46,16 @@ const skillCategoriesData: SkillCategory[] = [
   {
     id: 'frontend',
     name: 'Frontend',
-    icon: Smartphone, // Using Smartphone as a generic "display" icon, can be Palette too
+    icon: Smartphone, 
     skills: [
       { id: 'html', name: 'HTML5', icon: Code },
-      { id: 'css', name: 'CSS3', icon: Code }, // Replaced Palette with Code for consistency with other code-related skills
+      { id: 'css', name: 'CSS3', icon: Code }, 
       { id: 'javascript', name: 'JavaScript (ES6+)', icon: Code },
       { id: 'typescript', name: 'TypeScript', icon: Code },
-      { id: 'react', name: 'React', icon: Code }, // Brain could be for AI/ML, Code is more generic
+      { id: 'react', name: 'React', icon: Code }, 
       { id: 'nextjs', name: 'Next.js', icon: Code },
       { id: 'tailwind', name: 'Tailwind CSS', icon: Wind },
-      { id: 'redux', name: 'Redux', icon: Settings }, // Settings for state management
+      { id: 'redux', name: 'Redux', icon: Settings }, 
     ],
   },
   {
@@ -97,10 +97,10 @@ const skillCategoriesData: SkillCategory[] = [
   },
   {
     id: 'devopsTesting',
-    name: 'DevOps &amp; Testing',
-    icon: Settings, // Using Settings as a general CI/CD, tools icon
+    name: 'DevOps & Testing',
+    icon: Settings, 
     skills: [
-      { id: 'git', name: 'Git &amp; GitHub', icon: Github },
+      { id: 'git', name: 'Git & GitHub', icon: Github },
       { id: 'docker', name: 'Docker', icon: Container },
       { id: 'aws', name: 'AWS (EC2, S3)', icon: Cloud },
       { id: 'jest', name: 'Jest', icon: TestTubeDiagonal },
@@ -116,7 +116,7 @@ const experienceData: Experience[] = [
     role: 'Senior Software Engineer',
     company: 'Tech Solutions Inc.',
     duration: 'Jan 2021 - Present',
-    logoUrl: 'https://picsum.photos/50/50?grayscale&seed=techinc', // Scaled
+    logoUrl: 'https://picsum.photos/50/50?grayscale&seed=techinc', 
     imageHint: 'company logo tech',
     descriptionPoints: [
       'Developed and maintained client iOS application using Swift and SwiftUI',
@@ -130,7 +130,7 @@ const experienceData: Experience[] = [
     role: 'Full-Stack Developer',
     company: 'Web Innovators LLC',
     duration: 'Jun 2018 - Dec 2020',
-    logoUrl: 'https://picsum.photos/50/50?grayscale&seed=webinnov', // Scaled
+    logoUrl: 'https://picsum.photos/50/50?grayscale&seed=webinnov', 
     imageHint: 'company logo web',
     descriptionPoints: [
       'Developed and maintained client websites using React and Node.js.',
@@ -146,7 +146,7 @@ const educationData: Education[] = [
     degree: 'M.S. in Computer Science',
     institution: 'University of Advanced Technology',
     duration: '2016 - 2018',
-    logoUrl: 'https://picsum.photos/40/40?grayscale&seed=uat', // Scaled
+    logoUrl: 'https://picsum.photos/40/40?grayscale&seed=uat', 
     imageHint: 'university logo UAT',
     description: 'Focused on software engineering and machine learning.',
   },
@@ -155,7 +155,7 @@ const educationData: Education[] = [
     degree: 'B.S. in Information Technology',
     institution: 'State College',
     duration: '2012 - 2016',
-    logoUrl: 'https://picsum.photos/40/40?grayscale&seed=statecol', // Scaled
+    logoUrl: 'https://picsum.photos/40/40?grayscale&seed=statecol', 
     imageHint: 'university logo state',
     description: 'Graduated with honors, active in coding club.',
   },
@@ -173,17 +173,17 @@ export default function AboutSection() {
         <div className="grid lg:grid-cols-5 gap-10 lg:gap-16 items-center mb-20 section-fade-in profile-card-hover">
           <div className="lg:col-span-2 flex justify-center lg:justify-start">
             <Image
-              src="https://picsum.photos/seed/newportrait/438/500" 
+              src="https://picsum.photos/seed/newportrait/350/400"
               alt="John Doe - Profile Picture"
-              width={438} // Scaled from 350
-              height={500} // Scaled from 400
+              width={350} 
+              height={400} 
               className="rounded-xl shadow-2xl object-cover"
               data-ai-hint="professional portrait"
             />
           </div>
           <div className="lg:col-span-3">
             <h3 className="text-2xl font-semibold mb-4 text-accent">A Bit About Me</h3>
-            <div className="space-y-4 text-muted-foreground text-lg p-4">
+            <div className="space-y-4 text-muted-foreground text-base">
                 {newIntroParagraph.split('\n\n').map((paragraph, index) => (
                     <p key={index}>{paragraph}</p>
                 ))}
@@ -214,12 +214,12 @@ export default function AboutSection() {
           <h3 className="text-3xl font-bold text-center mb-4 text-foreground">
             Technical <span className="text-accent">Skills</span>
           </h3>
-          <p className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto">
+          <p className="text-center text-muted-foreground mb-12 max-w-2xl mx-auto text-base">
             I&apos;ve gained proficiency in various technologies throughout my career. Here are the key tools and frameworks I use to build exceptional products.
           </p>
           <div className="grid md:grid-cols-2 gap-8 stagger-fade-in">
             {skillCategoriesData.map((category) => (
-              <Card key={category.id} className="shadow-lg hover:shadow-xl transition-all duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-[1.02] bg-card overflow-hidden border-animation">
+              <Card key={category.id} className="shadow-lg bg-card overflow-hidden">
                 <CardHeader className="flex flex-row items-center gap-3 space-y-0 pb-4">
                   <category.icon className="h-7 w-7 text-accent" />
                   <CardTitle className="text-xl font-semibold">{category.name}</CardTitle>
@@ -251,11 +251,11 @@ export default function AboutSection() {
               EDUCATION
             </h4>
             <div className="relative container mx-auto w-full max-w-4xl px-4">
-              <div className="absolute left-1/2 top-0 bottom-0 w-1 bg-border/50 transform -translate-x-1/2 hidden md:block timeline-item-animate" style={{ animationDelay: '0.1s' }}></div>
+              <div className="absolute left-1/2 top-0 bottom-0 w-1 bg-border/50 transform -translate-x-1/2 hidden md:block timeline-connector-line" ></div>
               {educationData.map((edu, idx) => (
                 <div key={edu.id} className={`mb-12 flex md:items-center w-full timeline-item-animate`} style={{ animationDelay: `${(idx * 0.2) + 0.2}s` }}>
                   <div className={`w-full md:w-[calc(50%-2rem)] ${idx % 2 === 0 ? 'md:ml-auto md:pl-8 md:text-left' : 'md:mr-auto md:pr-8 md:text-right'}`}>
-                    <Card className="shadow-lg hover:shadow-2xl transition-all duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-[1.02] bg-card profile-card-hover">
+                    <Card className="shadow-lg hover:shadow-2xl transition-all duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-[1.02] bg-card profile-card-hover border-animation">
                        <CardHeader className={`pb-3 ${idx % 2 === 0 ? 'md:items-start' : 'md:items-end'}`}>
                         <div className="flex items-center gap-3">
                            {edu.logoUrl && (
@@ -288,11 +288,11 @@ export default function AboutSection() {
               EXPERIENCE
             </h4>
              <div className="relative container mx-auto w-full max-w-4xl px-4">
-              <div className="absolute left-1/2 top-0 bottom-0 w-1 bg-border/50 transform -translate-x-1/2 hidden md:block timeline-item-animate" style={{ animationDelay: '0.1s' }}></div>
+              <div className="absolute left-1/2 top-0 bottom-0 w-1 bg-border/50 transform -translate-x-1/2 hidden md:block timeline-connector-line" ></div>
               {experienceData.map((exp, idx) => (
                 <div key={exp.id} className={`mb-12 flex md:items-center w-full timeline-item-animate`} style={{ animationDelay: `${(idx * 0.2) + 0.2}s` }}>
                   <div className={`w-full md:w-[calc(50%-2rem)] ${idx % 2 === 0 ? 'md:ml-auto md:pl-8 md:text-left' : 'md:mr-auto md:pr-8 md:text-right'}`}>
-                    <Card className="shadow-lg hover:shadow-2xl transition-all duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-[1.02] bg-card profile-card-hover">
+                    <Card className="shadow-lg hover:shadow-2xl transition-all duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-[1.02] bg-card profile-card-hover border-animation">
                        <CardHeader className={`pb-3 ${idx % 2 === 0 ? 'md:items-start' : 'md:items-end'}`}>
                         <div className="flex items-center gap-3">
                           {exp.logoUrl && (
