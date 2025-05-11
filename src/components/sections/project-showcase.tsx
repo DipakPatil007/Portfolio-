@@ -35,7 +35,7 @@ const projectsData: Project[] = [
     tags: ['HTML', 'CSS', 'JavaScript'],
     repoUrl: '#',
   },
-   {
+  {
     id: 'proj4',
     title: 'AI Powered Blog Generator',
     description: 'A platform that uses generative AI to help users create blog posts.',
@@ -50,7 +50,7 @@ const projectsData: Project[] = [
 export default function ProjectShowcase() {
   return (
     <section id="projects" className="w-full scroll-mt-20 py-16 md:py-24 lg:py-32 bg-background">
-      <div className="container mx-auto max-w-5xl px-4 md:px-6">
+      <div className="container mx-auto max-w-7xl px-4 md:px-6">
         <h2 className="text-3xl font-bold tracking-tight text-center sm:text-4xl md:text-5xl mb-12">
           My Projects
         </h2>
@@ -87,7 +87,7 @@ export default function ProjectShowcase() {
                 )}
                 {project.repoUrl && (
                   <Link href={project.repoUrl} target="_blank" rel="noopener noreferrer">
-                    <Button variant="ghost" size="sm">
+                    <Button variant="outline" size="sm">
                       <Github className="mr-2 h-4 w-4" /> Code
                     </Button>
                   </Link>
