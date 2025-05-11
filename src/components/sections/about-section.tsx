@@ -2,9 +2,8 @@ import Image from 'next/image';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import type { Skill, Experience, Education, SkillCategory } from '@/types';
-import { Code, Server, Palette, Database, Zap, Layers, ServerCog, Smartphone, Settings, Coffee, Wind, Terminal, BarChartBig, Filter, Search, Flame, Network, Container, Anchor, Wrench, Github, Cloud, Gauge, AreaChart, Brain, Users, Lightbulb } from 'lucide-react';
+import { Layers, Lightbulb, Users, Smartphone, Coffee, Code, Wind, Terminal, BarChartBig, Filter, Search, Server, Flame, Network, Database, Container, Anchor, Wrench, Github, Cloud, Gauge, AreaChart, Brain, TestTubeDiagonal, Settings} from 'lucide-react';
 import type { LucideIcon } from 'lucide-react';
-// import TimelineItemCard from '@/components/core/timeline-item-card';
 
 
 const newIntroParagraph = "I'm Dipak Patil, a dedicated Full-Stack Developer with a passion for crafting innovative and user-centric digital solutions. My journey in technology is driven by a constant curiosity and a desire to solve complex problems with elegant and efficient code. I thrive in collaborative environments, transforming ideas into tangible products that not only meet user needs but also exceed expectations. With a strong foundation in both front-end and back-end technologies, I'm committed to continuous learning and staying at the forefront of industry trends to deliver high-quality software.";
@@ -45,19 +44,18 @@ const competenciesData: Competency[] = [
 
 const skillCategoriesData: SkillCategory[] = [
   {
-    id: 'mobile',
-    name: 'Mobile',
-    icon: Smartphone,
+    id: 'frontend',
+    name: 'Frontend',
+    icon: Smartphone, // Using Smartphone as a generic "display" icon, can be Palette too
     skills: [
-      { id: 'iOS', name: 'iOS Apps', icon: Smartphone },
-      { id: 'android', name: 'Android', icon: Smartphone },
-      { id: 'reactnative', name: 'React Native', icon: Smartphone },
-      { id: 'swift', name: 'Swift', icon: Coffee },
-      { id: 'swiftUI', name: 'SwiftUI', icon: Coffee },
-      { id: 'java', name: 'Java', icon: Smartphone },
-      { id: 'typescript_mobile', name: 'TypeScript', icon: Code },
-      { id: 'javascript_mobile', name: 'JavaScript', icon: Code },
-      { id: 'tailwind_mobile', name: 'Tailwind CSS', icon: Wind },
+      { id: 'html', name: 'HTML5', icon: Code },
+      { id: 'css', name: 'CSS3', icon: Code }, // Replaced Palette with Code for consistency with other code-related skills
+      { id: 'javascript', name: 'JavaScript (ES6+)', icon: Code },
+      { id: 'typescript', name: 'TypeScript', icon: Code },
+      { id: 'react', name: 'React', icon: Code }, // Brain could be for AI/ML, Code is more generic
+      { id: 'nextjs', name: 'Next.js', icon: Code },
+      { id: 'tailwind', name: 'Tailwind CSS', icon: Wind },
+      { id: 'redux', name: 'Redux', icon: Settings }, // Settings for state management
     ],
   },
   {
@@ -78,34 +76,36 @@ const skillCategoriesData: SkillCategory[] = [
     name: 'Backend',
     icon: Server,
     skills: [
-      { id: 'nodejs', name: 'Node.js', icon: Server },
-      { id: 'express', name: 'Express', icon: Code }
+      { id: 'nodejs', name: 'Node.js', icon: Code },
+      { id: 'expressjs', name: 'Express.js', icon: Code },
+      { id: 'python', name: 'Python', icon: Code },
+      { id: 'django', name: 'Django', icon: Code },
+      { id: 'restapi', name: 'RESTful APIs', icon: Network },
+      { id: 'graphql', name: 'GraphQL', icon: Network },
     ],
   },
   {
     id: 'database',
-    name: 'Database',
+    name: 'Databases',
     icon: Database,
     skills: [
-      { id: 'sql', name: 'SQL', icon: Database },
-      { id: 'nosql', name: 'NoSQL', icon: Database },
-      { id: 'firebase', name: 'Firebase', icon: Database },
-      { id: 'Mongo', name: 'MongoDB', icon: Database },
-      { id:'sqlite', name:'SQLite', icon: Database }
+      { id: 'mongodb', name: 'MongoDB', icon: Database },
+      { id: 'postgresql', name: 'PostgreSQL', icon: Database },
+      { id: 'mysql', name: 'MySQL', icon: Database },
+      { id: 'firebase', name: 'Firebase', icon: Flame },
     ],
   },
   {
-    id: 'devops',
-    name: 'DevOps',
-    icon: Settings,
+    id: 'devopsTesting',
+    name: 'DevOps &amp; Testing',
+    icon: Settings, // Using Settings as a general CI/CD, tools icon
     skills: [
-      { id: 'kubernetes', name: 'Kubernetes', icon: Container },
-      { id: 'helm', name: 'Helm', icon: Anchor },
-      { id: 'jenkins', name: 'Jenkins', icon: Wrench },
-      { id: 'githubactions', name: 'GitHub Actions', icon: Github },
-      { id: 'aws', name: 'AWS', icon: Cloud },
-      { id: 'prometheus', name: 'Prometheus', icon: Gauge },
-      { id: 'grafana', name: 'Grafana', icon: AreaChart },
+      { id: 'git', name: 'Git &amp; GitHub', icon: Github },
+      { id: 'docker', name: 'Docker', icon: Container },
+      { id: 'aws', name: 'AWS (EC2, S3)', icon: Cloud },
+      { id: 'jest', name: 'Jest', icon: TestTubeDiagonal },
+      { id: 'rtl', name: 'React Testing Library', icon: TestTubeDiagonal },
+      { id: 'ci-cd', name: 'CI/CD', icon: Wrench },
     ],
   },
 ];
@@ -113,11 +113,11 @@ const skillCategoriesData: SkillCategory[] = [
 const experienceData: Experience[] = [
   {
     id: 'exp1',
-    role: 'Software Engineer',
-    company: 'Aress Softwarre',
-    duration: 'Aug 2023 - Present',
-    logoUrl: '',
-    imageHint: 'company logo web',
+    role: 'Senior Software Engineer',
+    company: 'Tech Solutions Inc.',
+    duration: 'Jan 2021 - Present',
+    logoUrl: 'https://picsum.photos/50/50?grayscale&seed=techinc', // Scaled
+    imageHint: 'company logo tech',
     descriptionPoints: [
       'Developed and maintained client iOS application using Swift and SwiftUI',
       'Collaborated with designers to implement responsive UIs by utilizing the autolayout',
@@ -127,11 +127,11 @@ const experienceData: Experience[] = [
   },
   {
     id: 'exp2',
-    role: 'Web developer Intern',
-    company: 'LetGrowMore',
-    duration: 'Jan 2022 - March 2022',
-    logoUrl: 'https://picsum.photos/40/40?grayscale&seed=techinc',
-    imageHint: 'company logo tech',
+    role: 'Full-Stack Developer',
+    company: 'Web Innovators LLC',
+    duration: 'Jun 2018 - Dec 2020',
+    logoUrl: 'https://picsum.photos/50/50?grayscale&seed=webinnov', // Scaled
+    imageHint: 'company logo web',
     descriptionPoints: [
       'Developed and maintained client websites using React and Node.js.',
       'Collaborated with designers to implement responsive UIs.',
@@ -143,20 +143,20 @@ const experienceData: Experience[] = [
 const educationData: Education[] = [
   {
     id: 'edu1',
-    degree: 'B.E in Computer Engineering',
-    institution: 'Savitribai Phule Pune University',
-    duration: '2019 - 2023',
-    logoUrl: '',
-    imageHint: 'university logo',
-    description: 'Focused on fundamentals of computers engineering and software engineering ',
+    degree: 'M.S. in Computer Science',
+    institution: 'University of Advanced Technology',
+    duration: '2016 - 2018',
+    logoUrl: 'https://picsum.photos/40/40?grayscale&seed=uat', // Scaled
+    imageHint: 'university logo UAT',
+    description: 'Focused on software engineering and machine learning.',
   },
   {
     id: 'edu2',
-    degree: 'High School',
-    institution: 'RSSPM\'S NANASAHEB YASHAVANTRAO N.CHAVAN ARTS,SCIENCE&COMMERCE COLLEGE,CHALISGAON',
-    duration: '2017 - 2019',
-    logoUrl: 'https://picsum.photos/40/40?grayscale&seed=statecol',
-    imageHint: 'High school',
+    degree: 'B.S. in Information Technology',
+    institution: 'State College',
+    duration: '2012 - 2016',
+    logoUrl: 'https://picsum.photos/40/40?grayscale&seed=statecol', // Scaled
+    imageHint: 'university logo state',
     description: 'Graduated with honors, active in coding club.',
   },
 ];
@@ -173,10 +173,10 @@ export default function AboutSection() {
         <div className="grid lg:grid-cols-5 gap-10 lg:gap-16 items-center mb-20 section-fade-in profile-card-hover">
           <div className="lg:col-span-2 flex justify-center lg:justify-start">
             <Image
-              src="https://picsum.photos/seed/newportrait/350/400" 
-              alt="Dipak Patil - Profile Picture"
-              width={350}
-              height={400}
+              src="https://picsum.photos/seed/newportrait/438/500" 
+              alt="John Doe - Profile Picture"
+              width={438} // Scaled from 350
+              height={500} // Scaled from 400
               className="rounded-xl shadow-2xl object-cover"
               data-ai-hint="professional portrait"
             />
@@ -196,7 +196,7 @@ export default function AboutSection() {
           <h3 className="text-3xl font-bold text-center mb-12 text-foreground">What I Do</h3>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 stagger-fade-in">
             {competenciesData.map((competency) => (
-              <Card key={competency.id} className="shadow-lg hover:shadow-xl transition-all duration-300 ease-in-out transform hover:-translate-y-2 hover:scale-105 bg-card">
+              <Card key={competency.id} className="shadow-lg hover:shadow-xl transition-all duration-300 ease-in-out transform hover:-translate-y-2 hover:scale-105 bg-card border-animation">
                 <CardHeader className="items-center text-center">
                   <competency.icon className="h-12 w-12 mb-3 text-accent" />
                   <CardTitle className="text-xl">{competency.title}</CardTitle>
@@ -219,7 +219,7 @@ export default function AboutSection() {
           </p>
           <div className="grid md:grid-cols-2 gap-8 stagger-fade-in">
             {skillCategoriesData.map((category) => (
-              <Card key={category.id} className="shadow-lg hover:shadow-xl transition-all duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-[1.02] bg-card overflow-hidden">
+              <Card key={category.id} className="shadow-lg hover:shadow-xl transition-all duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-[1.02] bg-card overflow-hidden border-animation">
                 <CardHeader className="flex flex-row items-center gap-3 space-y-0 pb-4">
                   <category.icon className="h-7 w-7 text-accent" />
                   <CardTitle className="text-xl font-semibold">{category.name}</CardTitle>
@@ -229,7 +229,7 @@ export default function AboutSection() {
                     <Badge
                       key={skill.id}
                       variant="outline"
-                      className="px-3 py-1.5 text-sm flex items-center gap-2 border-primary/30 bg-primary/5 hover:bg-primary/10 transition-colors duration-200"
+                      className="px-3 py-1.5 text-sm flex items-center gap-2 border-primary/30 bg-primary/5 hover:bg-primary/10 transition-colors duration-200 tech-icon-hover"
                     >
                       {skill.icon && <skill.icon className="h-4 w-4 text-accent" />}
                       <span>{skill.name}</span>
@@ -259,7 +259,7 @@ export default function AboutSection() {
                        <CardHeader className={`pb-3 ${idx % 2 === 0 ? 'md:items-start' : 'md:items-end'}`}>
                         <div className="flex items-center gap-3">
                            {edu.logoUrl && (
-                            <Image src={edu.logoUrl} alt={`${edu.institution} logo`} width={32} height={32} className="rounded-sm border object-contain" data-ai-hint={edu.imageHint || "university logo"} />
+                            <Image src={edu.logoUrl} alt={`${edu.institution} logo`} width={40} height={40} className="rounded-sm border object-contain" data-ai-hint={edu.imageHint || "university logo"} />
                           )}
                           <CardTitle className="text-lg font-semibold">{edu.degree}</CardTitle>
                         </div>
@@ -296,7 +296,7 @@ export default function AboutSection() {
                        <CardHeader className={`pb-3 ${idx % 2 === 0 ? 'md:items-start' : 'md:items-end'}`}>
                         <div className="flex items-center gap-3">
                           {exp.logoUrl && (
-                            <Image src={exp.logoUrl} alt={`${exp.company} logo`} width={32} height={32} className="rounded-sm border object-contain" data-ai-hint={exp.imageHint || "company logo"}/>
+                            <Image src={exp.logoUrl} alt={`${exp.company} logo`} width={50} height={50} className="rounded-sm border object-contain" data-ai-hint={exp.imageHint || "company logo"}/>
                           )}
                           <CardTitle className="text-lg font-semibold">{exp.role}</CardTitle>
                         </div>
