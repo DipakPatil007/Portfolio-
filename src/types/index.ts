@@ -25,7 +25,7 @@ export interface Experience {
   company: string;
   duration: string;
   descriptionPoints: string[];
-  logoUrl?: string;
+  logoUrl?: any;
   imageHint?: string;
 }
 
@@ -35,7 +35,7 @@ export interface Education {
   institution: string;
   duration: string;
   description?: string;
-  logoUrl?: string;
+  logoUrl?: any;
   imageHint?: string;
 }
 

@@ -343,12 +343,12 @@ body {
   }
 
   50% {
-    transform: translateY(-10px);
+    transform: translateY(-15px);
   }
 }
 
 .animate-float {
-  animation: float 6s ease-in-out infinite;
+  animation: float 3s ease-in-out infinite;
 }
 
 /* For project cards in ProjectShowcase */
@@ -444,7 +444,7 @@ body {
 
 /* Ensure timeline connector lines are visible */
 .timeline-connector-line {
-  width: 2px;
+  width: 4px;
   /* Or your preferred thickness */
   background-color: hsl(var(--border));
   /* Or hsl(var(--accent)) for more emphasis */

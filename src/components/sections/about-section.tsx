@@ -4,7 +4,11 @@ import { Badge } from '@/components/ui/badge';
 import type { Skill, Experience, Education, SkillCategory } from '@/types';
 import { Coffee, Layers, Lightbulb, Users, Smartphone, Code, Wind, Terminal, Server, Network, Database, Container, Anchor, Wrench, Github, Cloud, Gauge, AreaChart, Brain, TestTubeDiagonal, Settings, Flame } from 'lucide-react';
 import type { LucideIcon } from 'lucide-react';
-
+import profilepic from '../../app/images/profilepic2.jpg'
+import hsclogo from '../../app/images/hsclogo.png'
+import sppulogo from '../../app/images/sppulogo.png'
+import aresslogo from '../../app/images/aresslogo.jpeg'
+import lgmlogo from '../../app/images/lgmlogo.jpeg'
 
 const newIntroParagraph = "I'm Dipak Patil, a dedicated Full-Stack Developer and Mobile Application Developer with a passion for crafting innovative and user-centric digital solutions. My journey in technology is driven by constant curiosity and a desire to solve complex problems with elegant and efficient code. I thrive in collaborative environments, transforming ideas into tangible products that not only meet user needs but also exceed expectations. With a strong foundation in both front-end and back-end technologies, as well as expertise in building mobile apps for iOS, Android, and React Native, I'm committed to continuous learning and staying at the forefront of industry trends to deliver high-quality software.";
 
@@ -78,11 +82,7 @@ const skillCategoriesData: SkillCategory[] = [
     icon: Server,
     skills: [
       { id: 'nodejs', name: 'Node.js', icon: Code },
-      { id: 'expressjs', name: 'Express.js', icon: Code },
-      { id: 'python', name: 'Python', icon: Code },
-      { id: 'django', name: 'Django', icon: Code },
-      { id: 'restapi', name: 'RESTful APIs', icon: Network },
-      { id: 'graphql', name: 'GraphQL', icon: Network },
+      { id: 'expressjs', name: 'Express.js', icon: Code }
     ],
   },
   {
@@ -91,7 +91,7 @@ const skillCategoriesData: SkillCategory[] = [
     icon: Database,
     skills: [
       { id: 'mongodb', name: 'MongoDB', icon: Database },
-      { id: 'postgresql', name: 'PostgreSQL', icon: Database },
+      { id: 'sqlite', name: 'SQLite', icon: Database },
       { id: 'mysql', name: 'MySQL', icon: Database },
       { id: 'firebase', name: 'Firebase', icon: Flame },
     ],
@@ -102,8 +102,8 @@ const skillCategoriesData: SkillCategory[] = [
     icon: Settings,
     skills: [
       { id: 'git', name: 'Git & GitHub', icon: Github },
-      { id: 'docker', name: 'Docker', icon: Container },
-      { id: 'aws', name: 'AWS (EC2, S3)', icon: Cloud },
+      // { id: 'docker', name: 'Docker', icon: Container },
+      // { id: 'aws', name: 'AWS (EC2, S3)', icon: Cloud },
       { id: 'jest', name: 'Jest', icon: TestTubeDiagonal },
       { id: 'rtl', name: 'React Testing Library', icon: TestTubeDiagonal },
       { id: 'ci-cd', name: 'CI/CD', icon: Wrench },
@@ -117,7 +117,7 @@ const experienceData: Experience[] = [
     role: 'Software Engineer',
     company: 'Aress Softwarre',
     duration: 'Aug 2023 - Present',
-    logoUrl: '',
+    logoUrl: aresslogo,
     imageHint: 'company logo web',
     descriptionPoints: [
       'Developed and maintained client iOS application using Swift and SwiftUI',
@@ -131,7 +131,7 @@ const experienceData: Experience[] = [
     role: 'Web developer Intern',
     company: 'LetGrowMore',
     duration: 'Jan 2022 - March 2022',
-    logoUrl: 'https://picsum.photos/40/40?grayscale&seed=techinc',
+    logoUrl: lgmlogo,
     imageHint: 'company logo tech',
     descriptionPoints: [
       'Developed and maintained client websites using React and Node.js.',
@@ -147,7 +147,7 @@ const educationData: Education[] = [
     degree: 'B.E in Computer Engineering',
     institution: 'Savitribai Phule Pune University',
     duration: '2019 - 2023',
-    logoUrl: 'https://picsum.photos/40/40?grayscale&seed=statecol',
+    logoUrl: sppulogo,
     imageHint: 'university logo',
     description: 'Focused on fundamentals of computers engineering and software engineering ',
   },
@@ -156,7 +156,7 @@ const educationData: Education[] = [
     degree: 'High School',
     institution: 'RSSPM\'S NANASAHEB YASHAVANTRAO N.CHAVAN ARTS,SCIENCE&COMMERCE COLLEGE,CHALISGAON',
     duration: '2017 - 2019',
-    logoUrl: 'https://picsum.photos/40/40?grayscale&seed=statecol',
+    logoUrl: hsclogo,
     imageHint: 'High school',
     description: 'Graduated with honors, active in coding club.',
   },
@@ -174,7 +174,7 @@ export default function AboutSection() {
         <div className="grid lg:grid-cols-5 gap-10 lg:gap-16 items-center mb-20 section-fade-in p-5 profile-card-hover">
           <div className="lg:col-span-2 flex justify-center lg:justify-start">
             <Image
-              src="https://picsum.photos/seed/newportrait/350/400"
+              src={profilepic}
               alt="John Doe - Profile Picture"
               width={350}
               height={400}
@@ -288,7 +288,7 @@ export default function AboutSection() {
             <h4 className="text-2xl font-bold tracking-tight text-center sm:text-3xl mb-12 text-accent">
               EXPERIENCE
             </h4>
-            <div className="relative container mx-auto w-full max-w-4xl px-4">
+            <div className="relative container mx-auto w-full max-w-5xl px-4">
               <div className="absolute left-1/2 top-0 bottom-0 w-1 bg-border/50 transform -translate-x-1/2 hidden md:block timeline-connector-line" ></div>
               {experienceData.map((exp, idx) => (
                 <div key={exp.id} className={`mb-12 flex md:items-center w-full timeline-item-animate`} style={{ animationDelay: `${(idx * 0.2) + 0.2}s` }}>

@@ -2,6 +2,7 @@ import { Button } from '@/components/ui/button';
 import { FileText } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
+import profileImage from '../../app/images/profilepic.png'
 
 export default function HeroSection() {
   return (
@@ -24,7 +25,7 @@ export default function HeroSection() {
               Full-Stack Developer
             </h2>
             <p className="mt-6 text-base md:text-lg text-muted-foreground max-w-xl mx-auto lg:mx-0 animate-fadeInUp" style={{ animationDelay: '0.8s' }}>
-              I create modern and responsive web applications with a focus on user experience and performance. Passionate about turning ideas into reality through code.
+              I create modern and responsive web applications and mobile application with a focus on user experience and performance. Passionate about turning ideas into reality through code.
             </p>
             <div className="mt-10 flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 animate-fadeInUp" style={{ animationDelay: '1s' }}>
               <Link href="#projects" passHref>
@@ -35,7 +36,7 @@ export default function HeroSection() {
                   View My Work
                 </Button>
               </Link>
-              <Link href="/resume.pdf" target="_blank" rel="noopener noreferrer" passHref>
+              <Link href="https://drive.google.com/file/d/1y4j6J9ryV1Ri6WYS4VkU-XRf3z2PM4r2/view" target="_blank" rel="noopener noreferrer" passHref>
                 <Button
                   variant="outline"
                   size="lg"
@@ -51,8 +52,8 @@ export default function HeroSection() {
           <div className="lg:w-2/5 xl:w-1/2 flex justify-center lg:justify-end mt-12 lg:mt-0 animate-fadeInUp" style={{ animationDelay: '1.2s' }}>
             <div className="relative w-[18.75rem] h-[18.75rem] md:w-[25rem] md:h-[25rem] lg:w-[28.125rem] lg:h-[28.125rem]">
               <Image
-                src="https://picsum.photos/seed/animehero/500/500"
-                alt="John Doe - Professional"
+                src={profileImage}
+                alt="Dipak Patil - Professional"
                 width={500}
                 height={500}
                 className="rounded-full object-cover shadow-2xl border-[0.25rem] border-card animate-float hero-image-glow"
