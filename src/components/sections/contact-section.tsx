@@ -51,7 +51,7 @@ export default function ContactSection() {
   }
 
   return (
-    <section id="contact" className="w-full scroll-mt-20 py-16 md:py-24 lg:py-32 contact-section-static-bg">
+    <section id="contact" className="w-full scroll-mt-20 py-16 md:py-10 lg:py-10 contact-section-static-bg">
       <div className="container mx-auto max-w-7xl px-4 md:px-6">
         <h2 className="text-3xl font-bold tracking-tight text-center sm:text-4xl md:text-5xl mb-12">
           Get In Touch
@@ -157,6 +157,7 @@ export default function ContactSection() {
                 </div>
               </CardContent>
             </Card>
+
             <Card className="shadow-lg hover:shadow-xl transition-all duration-300 ease-in-out transform hover:-translate-y-1.5 hover:scale-105">
               <CardHeader>
                 <CardTitle className="text-2xl">Let&apos;s Connect</CardTitle>
