@@ -7,7 +7,7 @@ import Footer from '@/components/layout/footer';
 import { Toaster } from '@/components/ui/toaster';
 
 export const metadata: Metadata = {
-  title: 'Portfolio Ace',
+  title: 'Dipak Patil',
   description: 'A modern portfolio website to showcase your skills and projects.',
 };
 

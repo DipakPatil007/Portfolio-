@@ -8,25 +8,42 @@ body {
 
 @layer base {
   :root {
-    --background: 210 17% 97%; /* Light Gray #F6F8FA */
-    --foreground: 212 13% 16%; /* Dark Navy Blue #24292F */
-    --card: 0 0% 100%; /* White */
-    --card-foreground: 212 13% 16%; /* Dark Navy Blue #24292F */
-    --popover: 0 0% 100%; /* White */
-    --popover-foreground: 212 13% 16%; /* Dark Navy Blue #24292F */
-    --primary: 212 13% 16%; /* Dark Navy Blue #24292F */
-    --primary-foreground: 210 17% 97%; /* Light Gray #F6F8FA */
-    --secondary: 210 17% 90%; /* Slightly darker Light Gray */
-    --secondary-foreground: 212 13% 16%; /* Dark Navy Blue #24292F */
-    --muted: 210 17% 94%; /* Muted Gray */
-    --muted-foreground: 212 13% 40%; /* Muted Navy Blue */
-    --accent: 175 65% 40%; /* Teal #26A69A */
-    --accent-foreground: 0 0% 100%; /* White */
+    --background: 210 17% 97%;
+    /* Light Gray #F6F8FA */
+    --foreground: 212 13% 16%;
+    /* Dark Navy Blue #24292F */
+    --card: 0 0% 100%;
+    /* White */
+    --card-foreground: 212 13% 16%;
+    /* Dark Navy Blue #24292F */
+    --popover: 0 0% 100%;
+    /* White */
+    --popover-foreground: 212 13% 16%;
+    /* Dark Navy Blue #24292F */
+    --primary: 212 13% 16%;
+    /* Dark Navy Blue #24292F */
+    --primary-foreground: 210 17% 97%;
+    /* Light Gray #F6F8FA */
+    --secondary: 210 17% 90%;
+    /* Slightly darker Light Gray */
+    --secondary-foreground: 212 13% 16%;
+    /* Dark Navy Blue #24292F */
+    --muted: 210 17% 94%;
+    /* Muted Gray */
+    --muted-foreground: 212 13% 40%;
+    /* Muted Navy Blue */
+    --accent: 175 65% 40%;
+    /* Teal #26A69A */
+    --accent-foreground: 0 0% 100%;
+    /* White */
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 98%;
-    --border: 210 17% 88%; /* Border Gray */
-    --input: 210 17% 92%; /* Input Gray */
-    --ring: 175 65% 45%; /* Teal #26A69A for rings */
+    --border: 210 17% 88%;
+    /* Border Gray */
+    --input: 210 17% 92%;
+    /* Input Gray */
+    --ring: 175 65% 45%;
+    /* Teal #26A69A for rings */
     --chart-1: 12 76% 61%;
     --chart-2: 173 58% 39%;
     --chart-3: 197 37% 24%;
@@ -37,34 +54,57 @@ body {
     /* Sidebar Light Theme */
     --sidebar-background: 210 17% 95%;
     --sidebar-foreground: 212 13% 25%;
-    --sidebar-primary: 175 65% 40%; /* Teal */
-    --sidebar-primary-foreground: 0 0% 100%; /* White */
+    --sidebar-primary: 175 65% 40%;
+    /* Teal */
+    --sidebar-primary-foreground: 0 0% 100%;
+    /* White */
     --sidebar-accent: 210 17% 90%;
-    --sidebar-accent-foreground: 175 65% 40%; /* Teal */
+    --sidebar-accent-foreground: 175 65% 40%;
+    /* Teal */
     --sidebar-border: 210 17% 85%;
-    --sidebar-ring: 175 65% 45%; /* Slightly lighter Teal */
-     --angle: 0deg; /* For border animation */
+    --sidebar-ring: 175 65% 45%;
+    /* Slightly lighter Teal */
+    --angle: 0deg;
+    /* For border animation */
   }
+
   .dark {
-    --background: 212 13% 10%; /* Even Darker Navy Blue for main background */
-    --foreground: 210 17% 97%; /* Light Gray #F6F8FA */
-    --card: 212 13% 16%; /* Dark Navy Blue #24292F for cards */
-    --card-foreground: 210 17% 97%; /* Light Gray #F6F8FA */
-    --popover: 212 13% 12%; /* Darker Navy for popover */
-    --popover-foreground: 210 17% 97%; /* Light Gray #F6F8FA */
-    --primary: 175 70% 50%; /* Slightly brighter Teal for primary actions in dark mode */
-    --primary-foreground: 212 13% 10%; /* Very Dark Navy */
-    --secondary: 212 13% 22%; /* Lighter Dark Navy */
-    --secondary-foreground: 210 17% 97%; /* Light Gray #F6F8FA */
-    --muted: 212 13% 25%; /* Muted Dark Navy */
-    --muted-foreground: 210 17% 65%; /* Muted Light Gray - slightly brighter for better contrast */
-    --accent: 175 70% 50%; /* Lighter Teal for dark mode */
-    --accent-foreground: 212 13% 10%; /* Very Dark Navy */
+    --background: 212 13% 10%;
+    /* Even Darker Navy Blue for main background */
+    --foreground: 210 17% 97%;
+    /* Light Gray #F6F8FA */
+    --card: 212 13% 16%;
+    /* Dark Navy Blue #24292F for cards */
+    --card-foreground: 210 17% 97%;
+    /* Light Gray #F6F8FA */
+    --popover: 212 13% 12%;
+    /* Darker Navy for popover */
+    --popover-foreground: 210 17% 97%;
+    /* Light Gray #F6F8FA */
+    --primary: 175 70% 50%;
+    /* Slightly brighter Teal for primary actions in dark mode */
+    --primary-foreground: 212 13% 10%;
+    /* Very Dark Navy */
+    --secondary: 212 13% 22%;
+    /* Lighter Dark Navy */
+    --secondary-foreground: 210 17% 97%;
+    /* Light Gray #F6F8FA */
+    --muted: 212 13% 25%;
+    /* Muted Dark Navy */
+    --muted-foreground: 210 17% 65%;
+    /* Muted Light Gray - slightly brighter for better contrast */
+    --accent: 175 70% 50%;
+    /* Lighter Teal for dark mode */
+    --accent-foreground: 212 13% 10%;
+    /* Very Dark Navy */
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 0 0% 98%;
-    --border: 212 13% 28%; /* Border Dark Navy - slightly lighter for subtle borders */
-    --input: 212 13% 22%; /* Input Dark Navy - same as secondary */
-    --ring: 175 70% 50%; /* Lighter Teal for rings in dark mode */
+    --border: 212 13% 28%;
+    /* Border Dark Navy - slightly lighter for subtle borders */
+    --input: 212 13% 22%;
+    /* Input Dark Navy - same as secondary */
+    --ring: 175 70% 50%;
+    /* Lighter Teal for rings in dark mode */
     --chart-1: 220 70% 50%;
     --chart-2: 160 60% 45%;
     --chart-3: 30 80% 55%;
@@ -74,12 +114,16 @@ body {
     /* Sidebar Dark Theme */
     --sidebar-background: 212 13% 12%;
     --sidebar-foreground: 210 17% 80%;
-    --sidebar-primary: 175 70% 50%; /* Lighter Teal */
-    --sidebar-primary-foreground: 212 13% 10%; /* Very Dark Navy */
+    --sidebar-primary: 175 70% 50%;
+    /* Lighter Teal */
+    --sidebar-primary-foreground: 212 13% 10%;
+    /* Very Dark Navy */
     --sidebar-accent: 212 13% 20%;
-    --sidebar-accent-foreground: 175 70% 50%; /* Lighter Teal */
+    --sidebar-accent-foreground: 175 70% 50%;
+    /* Lighter Teal */
     --sidebar-border: 212 13% 22%;
-    --sidebar-ring: 175 70% 55%; /* Even Lighter Teal */
+    --sidebar-ring: 175 70% 55%;
+    /* Even Lighter Teal */
   }
 }
 
@@ -87,24 +131,39 @@ body {
   * {
     @apply border-border;
   }
+
   body {
     @apply bg-background text-foreground;
     @apply antialiased;
   }
+
   html {
     scroll-behavior: smooth;
+    font-size: 100%;
+    /* Adjusted base font size */
   }
 }
 
 /* Add CSS variables for Geist fonts */
 :root {
-  --font-geist-sans: ${GeistSans.variable};
+  --font-geist-sans: $ {
+    GeistSans.variable
+  }
+
+  ;
   /* --font-geist-mono: ${GeistMono.variable}; Removed as GeistMono is not imported */
 }
 
 @keyframes slow-zoom {
-  0%, 100% { transform: scale(1); }
-  50% { transform: scale(1.03); }
+
+  0%,
+  100% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.03);
+  }
 }
 
 .animate-slow-zoom {
@@ -115,6 +174,7 @@ body {
 .profile-card-hover {
   transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.4s ease-out;
 }
+
 .profile-card-hover:hover {
   transform: translateY(-8px) scale(1.02);
   box-shadow: 0 20px 25px -5px hsl(var(--foreground) / 0.1), 0 10px 10px -5px hsl(var(--foreground) / 0.04);
@@ -124,33 +184,58 @@ body {
 .card-interactive-hover {
   transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
+
 .card-interactive-hover:hover {
-  transform: translateY(-5px); /* Removed scale to match arhaan-dev more closely */
+  transform: translateY(-5px);
 }
 
 
 /* Adding a subtle fade-in animation for sections */
 @keyframes fadeIn {
-  from { opacity: 0; transform: translateY(20px); }
-  to { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .section-fade-in {
   animation: fadeIn 0.8s ease-out forwards;
-  opacity: 0; /* Start hidden */
+  opacity: 0;
+  /* Start hidden */
 }
 
 /* Staggered fade-in for items within a section */
-.stagger-fade-in > * {
+.stagger-fade-in>* {
   opacity: 0;
-  animation: slideInFromBottom 0.6s ease-out forwards; /* Changed to slideInFromBottom */
+  animation: slideInFromBottom 0.6s ease-out forwards;
+  /* Changed to slideInFromBottom */
 }
+
 /* Generate stagger delays using a utility or by hand if few items */
-.stagger-fade-in > *:nth-child(1) { animation-delay: 0.1s; }
-.stagger-fade-in > *:nth-child(2) { animation-delay: 0.2s; }
-.stagger-fade-in > *:nth-child(3) { animation-delay: 0.3s; }
-.stagger-fade-in > *:nth-child(4) { animation-delay: 0.4s; }
-.stagger-fade-in > *:nth-child(5) { animation-delay: 0.5s; }
+.stagger-fade-in>*:nth-child(1) {
+  animation-delay: 0.1s;
+}
+
+.stagger-fade-in>*:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.stagger-fade-in>*:nth-child(3) {
+  animation-delay: 0.3s;
+}
+
+.stagger-fade-in>*:nth-child(4) {
+  animation-delay: 0.4s;
+}
+
+.stagger-fade-in>*:nth-child(5) {
+  animation-delay: 0.5s;
+}
 
 
 /* Subtle grid background pattern for hero */
@@ -158,7 +243,8 @@ body {
   background-image:
     linear-gradient(to right, hsl(var(--border) / 0.05) 1px, transparent 1px),
     linear-gradient(to bottom, hsl(var(--border) / 0.05) 1px, transparent 1px);
-  background-size: 2rem 2rem; /* 32px by 32px grid */
+  background-size: 2rem 2rem;
+  /* 32px by 32px grid */
 }
 
 /* Animation for timeline items appearing */
@@ -167,6 +253,7 @@ body {
     opacity: 0;
     transform: translateY(50px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -175,7 +262,8 @@ body {
 
 .timeline-item-animate {
   animation: slideInFromBottom 0.5s ease-out forwards;
-  opacity: 0; /* Start hidden, will be revealed by animation */
+  opacity: 0;
+  /* Start hidden, will be revealed by animation */
 }
 
 /* Border animation for cards */
@@ -187,36 +275,39 @@ body {
 
 .border-animation {
   position: relative;
-  border: 2px solid transparent; /* Initial transparent border */
+  border: 2px solid transparent;
+  /* Initial transparent border */
 }
 
 .border-animation::before,
 .border-animation::after {
   content: "";
   position: absolute;
-  inset: -2px; /* Adjust based on desired border thickness, must match border width above + thickness of gradient border */
-  border-radius: inherit; /* Use the parent's border-radius */
-  background: conic-gradient(
-    from var(--angle),
-    hsl(var(--accent) / 0.5),
-    hsl(var(--accent) / 0.8),
-    hsl(var(--accent) / 0.5)
-  );
+  inset: -2px;
+  /* Adjust based on desired border thickness, must match border width above + thickness of gradient border */
+  border-radius: inherit;
+  /* Use the parent's border-radius */
+  background: conic-gradient(from var(--angle),
+      hsl(var(--accent) / 0.5),
+      hsl(var(--accent) / 0.1),
+      hsl(var(--accent) / 0.1));
   z-index: -1;
   opacity: 0;
   transition: opacity 0.3s ease-in-out;
-  animation: spin 3s linear infinite paused; /* Paused by default */
+  animation: spin 3s linear infinite paused;
+  /* Paused by default */
 }
 
 .border-animation:hover::before,
 .border-animation:hover::after {
   opacity: 1;
-  animation-play-state: running; /* Run animation on hover */
+  animation-play-state: running;
+  /* Run animation on hover */
 }
 
 /* Optional: if you want a glow effect as well */
 .border-animation:hover {
-   box-shadow: 0 0 15px hsl(var(--accent) / 0.3), 0 0 30px hsl(var(--accent) / 0.2);
+  box-shadow: 0 0 15px hsl(var(--accent) / 0.3), 0 0 30px hsl(var(--accent) / 0.2);
 }
 
 
@@ -232,6 +323,7 @@ body {
     opacity: 0;
     transform: translateY(30px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -244,18 +336,26 @@ body {
 }
 
 @keyframes float {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-10px); }
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-15px);
+  }
 }
 
 .animate-float {
-  animation: float 6s ease-in-out infinite;
+  animation: float 3s ease-in-out infinite;
 }
 
 /* For project cards in ProjectShowcase */
 .project-card-hover {
   transition: transform 0.3s ease-out, box-shadow 0.3s ease-out;
 }
+
 .project-card-hover:hover {
   transform: translateY(-8px);
   box-shadow: 0 10px 20px hsl(var(--foreground) / 0.07), 0 6px 6px hsl(var(--foreground) / 0.05);
@@ -263,17 +363,25 @@ body {
 
 /* Contact section no background animation class */
 .contact-section-static-bg {
-  background-color: hsl(var(--background)); /* or var(--secondary) if preferred */
+  background-color: hsl(var(--background));
+  /* or var(--secondary) if preferred */
 }
 
 /* Arrow bounce animation */
 @keyframes bounce-arrow {
-  0%, 20%, 50%, 80%, 100% {
+
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
     transform: translateY(0);
   }
+
   40% {
     transform: translateY(-15px);
   }
+
   60% {
     transform: translateY(-7px);
   }
@@ -288,6 +396,7 @@ body {
 .tech-icon-hover {
   transition: transform 0.3s ease, color 0.3s ease;
 }
+
 .tech-icon-hover:hover {
   transform: scale(1.2);
   color: hsl(var(--accent));
@@ -305,17 +414,72 @@ body {
   transform: translateY(0);
 }
 
-.skill-card-text-animation:nth-child(1) { transition-delay: 0.1s; }
-.skill-card-text-animation:nth-child(2) { transition-delay: 0.2s; }
-.skill-card-text-animation:nth-child(3) { transition-delay: 0.3s; }
-.skill-card-text-animation:nth-child(4) { transition-delay: 0.4s; }
-.skill-card-text-animation:nth-child(5) { transition-delay: 0.5s; }
-.skill-card-text-animation:nth-child(6) { transition-delay: 0.6s; }
-.skill-card-text-animation:nth-child(7) { transition-delay: 0.7s; }
+.skill-card-text-animation:nth-child(1) {
+  transition-delay: 0.1s;
+}
+
+.skill-card-text-animation:nth-child(2) {
+  transition-delay: 0.2s;
+}
+
+.skill-card-text-animation:nth-child(3) {
+  transition-delay: 0.3s;
+}
+
+.skill-card-text-animation:nth-child(4) {
+  transition-delay: 0.4s;
+}
+
+.skill-card-text-animation:nth-child(5) {
+  transition-delay: 0.5s;
+}
+
+.skill-card-text-animation:nth-child(6) {
+  transition-delay: 0.6s;
+}
+
+.skill-card-text-animation:nth-child(7) {
+  transition-delay: 0.7s;
+}
 
 /* Ensure timeline connector lines are visible */
 .timeline-connector-line {
-  width: 2px; /* Or your preferred thickness */
-  background-color: hsl(var(--border)); /* Or hsl(var(--accent)) for more emphasis */
+  width: 4px;
+  /* Or your preferred thickness */
+  background-color: hsl(var(--border));
+  /* Or hsl(var(--accent)) for more emphasis */
   height: 100%;
+}
+
+/* Hero image glow */
+.hero-image-glow {
+  position: relative;
+}
+
+.hero-image-glow::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background-color: hsl(var(--accent) / 0.15);
+  /* Subtle glow color from accent */
+  filter: blur(2rem);
+  /* Adjust blur for desired softness */
+  transform: translate(-50%, -50%) scale(0.9);
+  /* Scale down slightly to be behind the image */
+  z-index: -1;
+  /* Place behind the image */
+  opacity: 0.7;
+  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.animate-fadeInUp:hover+.hero-image-container .hero-image-glow::before,
+/* If hover is on text */
+.hero-image-container:hover .hero-image-glow::before {
+  /* If hover is on image container */
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(0.95);
 }

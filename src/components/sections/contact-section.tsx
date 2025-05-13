@@ -21,7 +21,7 @@ import { Mail, Phone, MapPin, Send } from 'lucide-react';
 const contactFormSchema = z.object({
   name: z.string().min(2, { message: 'Name must be at least 2 characters.' }),
   email: z.string().email({ message: 'Please enter a valid email address.' }),
-  subject: z.string().min(5, { message: 'Subject must be at least 5 characters.'}),
+  subject: z.string().min(5, { message: 'Subject must be at least 5 characters.' }),
   message: z.string().min(10, { message: 'Message must be at least 10 characters.' }),
 });
 
@@ -51,8 +51,8 @@ export default function ContactSection() {
   }
 
   return (
-    <section id="contact" className="w-full scroll-mt-20 py-16 md:py-24 lg:py-32">
-      <div className="container mx-auto px-4 md:px-6">
+    <section id="contact" className="w-full scroll-mt-20 py-16 md:py-24 lg:py-32 contact-section-static-bg">
+      <div className="container mx-auto max-w-7xl px-4 md:px-6">
         <h2 className="text-3xl font-bold tracking-tight text-center sm:text-4xl md:text-5xl mb-12">
           Get In Touch
         </h2>
@@ -157,7 +157,7 @@ export default function ContactSection() {
                 </div>
               </CardContent>
             </Card>
-             <Card className="shadow-lg hover:shadow-xl transition-all duration-300 ease-in-out transform hover:-translate-y-1.5 hover:scale-105">
+            <Card className="shadow-lg hover:shadow-xl transition-all duration-300 ease-in-out transform hover:-translate-y-1.5 hover:scale-105">
               <CardHeader>
                 <CardTitle className="text-2xl">Let&apos;s Connect</CardTitle>
               </CardHeader>
@@ -165,7 +165,7 @@ export default function ContactSection() {
                 <p className="text-muted-foreground mb-4">
                   I&apos;m always open to discussing new projects, creative ideas, or opportunities to be part of something amazing. Feel free to reach out!
                 </p>
-                 {/* Placeholder for social links if needed here, or keep in footer */}
+                {/* Placeholder for social links if needed here, or keep in footer */}
               </CardContent>
             </Card>
           </div>
