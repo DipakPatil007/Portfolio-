@@ -18,6 +18,7 @@ import { useToast } from '@/hooks/use-toast';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Mail, Phone, MapPin, Send } from 'lucide-react';
 import { useState } from 'react';
+import emailjs from '@emailjs/browser';
 
 const contactFormSchema = z.object({
   name: z.string().min(2, { message: 'Name must be at least 2 characters.' }),
@@ -42,16 +43,26 @@ export default function ContactSection() {
     },
   });
 
+  // EmailJS credentials (replace with your actual IDs from the EmailJS dashboard)
+  const EMAILJS_SERVICE_ID = 'service_ul36zhj';
+  const EMAILJS_TEMPLATE_ID = 'template_mo2l7m8';
+  const EMAILJS_PUBLIC_KEY = 'bKjXGinXZGW4Qaq2R';
+
   // onsubmit handler
   async function onSubmit(values: ContactFormValues) {
     setIsLoading(true);
     try {
-      const res = await fetch('/api/contact', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(values),
-      });
-      if (!res.ok) throw new Error('Failed to send');
+      const result = await emailjs.send(
+        EMAILJS_SERVICE_ID,
+        EMAILJS_TEMPLATE_ID,
+        {
+          name: values.name,
+          email: values.email,
+          title: values.subject,
+          message: values.message,
+        },
+        EMAILJS_PUBLIC_KEY
+      );
       toast({
         title: 'Message Sent!',
         description: 'Thanks for reaching out. I will get back to you soon.',
@@ -169,8 +180,8 @@ export default function ContactSection() {
                   <Mail className="h-6 w-6 text-accent" />
                   <div>
                     <h3 className="font-semibold">Email</h3>
-                    <a href="mailto:john.doe@example.com" className="text-muted-foreground hover:text-foreground transition-colors">
-                      Dipakpa2018@gmail.com
+                    <a href="mailto:dipakpa2018@gmail.com" className="text-muted-foreground hover:text-foreground transition-colors">
+                      dipakpa2018@gmail.com
                     </a>
                   </div>
                 </div>
@@ -178,7 +189,7 @@ export default function ContactSection() {
                   <Phone className="h-6 w-6 text-accent" />
                   <div>
                     <h3 className="font-semibold">Phone</h3>
-                    <a href="tel:+1234567890" className="text-muted-foreground hover:text-foreground transition-colors">
+                    <a href="tel:+918999729915" className="text-muted-foreground hover:text-foreground transition-colors">
                       +91 8999729915
                     </a>
                   </div>
