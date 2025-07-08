@@ -17,6 +17,7 @@ import { Textarea } from '@/components/ui/textarea';
 import { useToast } from '@/hooks/use-toast';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Mail, Phone, MapPin, Send } from 'lucide-react';
+import { useState } from 'react';
 
 const contactFormSchema = z.object({
   name: z.string().min(2, { message: 'Name must be at least 2 characters.' }),
@@ -29,6 +30,8 @@ type ContactFormValues = z.infer<typeof contactFormSchema>;
 
 export default function ContactSection() {
   const { toast } = useToast();
+  const [isLoading, setIsLoading] = useState(false);
+
   const form = useForm<ContactFormValues>({
     resolver: zodResolver(contactFormSchema),
     defaultValues: {
@@ -39,15 +42,30 @@ export default function ContactSection() {
     },
   });
 
+  // onsubmit handler
   async function onSubmit(values: ContactFormValues) {
-    // Simulate API call
-    await new Promise(resolve => setTimeout(resolve, 1000));
-    console.log(values);
-    toast({
-      title: 'Message Sent!',
-      description: 'Thanks for reaching out. I will get back to you soon.',
-    });
-    form.reset();
+    setIsLoading(true);
+    try {
+      const res = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(values),
+      });
+      if (!res.ok) throw new Error('Failed to send');
+      toast({
+        title: 'Message Sent!',
+        description: 'Thanks for reaching out. I will get back to you soon.',
+      });
+      form.reset();
+    } catch (error) {
+      toast({
+        title: 'Error',
+        description: 'Failed to send message. Please try again later.',
+        variant: 'destructive',
+      });
+    } finally {
+      setIsLoading(false);
+    }
   }
 
   return (
@@ -116,8 +134,25 @@ export default function ContactSection() {
                       </FormItem>
                     )}
                   />
-                  <Button type="submit" size="lg" className="w-full shadow-md hover:shadow-lg transition-shadow transform hover:-translate-y-0.5">
-                    Send Message <Send className="ml-2 h-4 w-4" />
+                  <Button
+                    type="submit"
+                    size="lg"
+                    className="w-full shadow-md hover:shadow-lg transition-shadow transform hover:-translate-y-0.5"
+                    disabled={isLoading}
+                  >
+                    {isLoading ? (
+                      <span className="flex items-center justify-center">
+                        <svg className="animate-spin h-5 w-5 mr-2 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                          <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
+                          <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8v8z"></path>
+                        </svg>
+                        Sending...
+                      </span>
+                    ) : (
+                      <>
+                        Send Message <Send className="ml-2 h-4 w-4" />
+                      </>
+                    )}
                   </Button>
                 </form>
               </Form>
