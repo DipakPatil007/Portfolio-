@@ -11,8 +11,8 @@ export async function POST(request: Request) {
     const transporter = nodemailer.createTransport({
         service: 'gmail',
         auth: {
-            user: process.env.EMAIL_USER,
-            pass: process.env.EMAIL_PASS,
+            user: process.env.EMAIL_USER || "Dipakpa2018@gmail.com",
+            pass: process.env.EMAIL_PASS || "pepw zalt rbcf kypa",
             // This is not the actual password, its a gmail app password
             // You can generate an app password from your Google account settings
         },
@@ -21,7 +21,7 @@ export async function POST(request: Request) {
     try {
         await transporter.sendMail({
             from: `"${name}" <${email}>`,
-            to: process.env.EMAIL_USER, // Send to your own email
+            to: process.env.EMAIL_USER || "Dipakpa2018@gmail.com", // Send to your own email
             subject: `[Portfolio] ${subject}`,
             text: message,
             html: `<p><strong>Name:</strong> ${name}</p>
