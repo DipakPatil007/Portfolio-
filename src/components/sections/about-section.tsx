@@ -10,7 +10,7 @@ import sppulogo from '../../app/images/sppulogo.png'
 import aresslogo from '../../app/images/aresslogo.jpeg'
 import lgmlogo from '../../app/images/lgmlogo.jpeg'
 
-const newIntroParagraph = "I'm Dipak Patil, a dedicated Full-Stack Developer and Mobile Application Developer with a passion for crafting innovative and user-centric digital solutions. My journey in technology is driven by constant curiosity and a desire to solve complex problems with elegant and efficient code. I thrive in collaborative environments, transforming ideas into tangible products that not only meet user needs but also exceed expectations. With a strong foundation in both front-end and back-end technologies, as well as expertise in building mobile apps for iOS, Android, and React Native, I'm committed to continuous learning and staying at the forefront of industry trends to deliver high-quality software.";
+const newIntroParagraph = "I'm Dipak Patil, a dedicated  Mobile Application Developer and Full-Stack Developer with a passion for crafting innovative and user-centric digital solutions. My journey in technology is driven by constant curiosity and a desire to solve complex problems with elegant and efficient code. I thrive in collaborative environments, transforming ideas into tangible products that not only meet user needs but also exceed expectations. With a strong foundation in both front-end and back-end technologies, as well as expertise in building mobile apps for iOS, Android, and React Native, I'm committed to continuous learning and staying at the forefront of industry trends to deliver high-quality software.";
 
 interface Competency {
   id: string;
@@ -21,16 +21,16 @@ interface Competency {
 
 const competenciesData: Competency[] = [
   {
-    id: 'fsd',
-    title: 'Full-Stack Development',
-    icon: Layers,
-    description: 'Crafting seamless digital experiences from front-end UIs to back-end APIs, ensuring robust and scalable solutions across the entire stack.',
-  },
-  {
     id: 'mobile-app',
     title: 'Mobile Application Development',
     icon: Smartphone,
     description: 'Crafting amazing application that ensuring robust and scalable solutions across the entire stack.',
+  },
+  {
+    id: 'fsd',
+    title: 'Full-Stack Development',
+    icon: Layers,
+    description: 'Crafting seamless digital experiences from front-end UIs to back-end APIs, ensuring robust and scalable solutions across the entire stack.',
   },
   {
     id: 'problem-solving',
@@ -60,7 +60,8 @@ const skillCategoriesData: SkillCategory[] = [
       { id: 'java', name: 'Java', icon: Smartphone },
       { id: 'typescript_mobile', name: 'TypeScript', icon: Code },
       { id: 'javascript_mobile', name: 'JavaScript', icon: Code },
-      { id: 'tailwind_mobile', name: 'Tailwind CSS', icon: Wind },
+      { id: 'tailwind_mobile', name: 'NativeWind CSS', icon: Wind },
+      { id: 'expo', name: 'Expo', icon: Container },
     ],
   },
   {
@@ -74,6 +75,7 @@ const skillCategoriesData: SkillCategory[] = [
       { id: 'javascript', name: 'JavaScript', icon: Code },
       { id: 'bootstrap', name: 'Bootstrap', icon: Wind },
       { id: 'tailwind_mobile', name: 'Tailwind CSS', icon: Wind },
+      { id: 'nextjs', name: 'Next.js', icon: Anchor },
     ],
   },
   {
@@ -82,7 +84,11 @@ const skillCategoriesData: SkillCategory[] = [
     icon: Server,
     skills: [
       { id: 'nodejs', name: 'Node.js', icon: Code },
-      { id: 'expressjs', name: 'Express.js', icon: Code }
+      { id: 'expressjs', name: 'Express.js', icon: Code },
+      { id: 'sanity', name: 'Sanity', icon: Code },
+      { id: 'firebase', name: 'Firebase', icon: Flame },
+      { id: 'neonDb', name: 'NeonDataBase', icon: Database },
+      { id: 'clerk', name: 'Clerk Authentication', icon: Flame },
     ],
   },
   {
@@ -92,8 +98,10 @@ const skillCategoriesData: SkillCategory[] = [
     skills: [
       { id: 'mongodb', name: 'MongoDB', icon: Database },
       { id: 'sqlite', name: 'SQLite', icon: Database },
-      { id: 'mysql', name: 'MySQL', icon: Database },
+      { id: 'mysql', name: 'SQL Server', icon: Database },
       { id: 'firebase', name: 'Firebase', icon: Flame },
+      { id: 'xcode', name: 'CoreData & SwiftData', icon: Database },
+      { id: 'react', name: 'Async Storage & MMKV', icon: Database },
     ],
   },
   {
@@ -104,9 +112,21 @@ const skillCategoriesData: SkillCategory[] = [
       { id: 'git', name: 'Git & GitHub', icon: Github },
       // { id: 'docker', name: 'Docker', icon: Container },
       // { id: 'aws', name: 'AWS (EC2, S3)', icon: Cloud },
+      { id: 'xcode', name: 'Xcode', icon: Terminal },
+      { id: 'app', name: 'Fastlane', icon: Terminal },
       { id: 'jest', name: 'Jest', icon: TestTubeDiagonal },
       { id: 'rtl', name: 'React Testing Library', icon: TestTubeDiagonal },
       { id: 'ci-cd', name: 'CI/CD', icon: Wrench },
+    ],
+  },
+  {
+    id: 'cloud',
+    name: 'Cloud',
+    icon: Cloud,
+    skills: [
+      { id: 'azure', name: 'Azure', icon: Cloud },
+      { id: 'xcloud', name: 'Apple CloudKit', icon: Cloud },
+      { id: 'firbase', name: 'Firebase Cloude', icon: Cloud },
     ],
   },
 ];

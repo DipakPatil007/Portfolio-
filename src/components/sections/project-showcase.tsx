@@ -9,39 +9,50 @@ import { Eye, Github } from 'lucide-react';
 const projectsData: Project[] = [
   {
     id: 'proj1',
-    title: 'E-commerce Platform',
-    description: 'A full-featured e-commerce platform with Stripe integration and admin dashboard.',
+    title: 'Online Interview Assessment System',
+    description: 'Developed a robust online interview platform using MERN stack and Socket.io, featuring seamless live video calling, real-time collaborative code editor with instant synchronization, live code compilation for immediate feedback, secure user authentication and session management, interview scheduling with automated email notifications.',
     imageUrl: 'https://picsum.photos/seed/ecomm/600/400',
-    imageHint: 'e-commerce website',
-    tags: ['Next.js', 'TypeScript', 'Stripe', 'Prisma', 'Tailwind CSS'],
-    liveDemoUrl: '#',
-    repoUrl: '#',
+    imageHint: 'interview platform interface',
+    tags: ['React.js', 'Node.js', 'MongoDB', 'express', 'Tailwind CSS', 'Socket.io'],
+    // liveDemoUrl: '#',
+    repoUrl: 'https://github.com/DipakPatil007/Online-Interview-Assessment-main',
   },
   {
     id: 'proj2',
-    title: 'Task Management App',
-    description: 'A collaborative task management tool with real-time updates and notifications.',
+    title: 'Fitness App',
+    description: 'Developed a cross-platform fitness app using React Native, Expo, and TypeScript, featuring authentication, workout tracking, and dynamic content from Sanity.io. Integrated Clerk for secure user management and OpenAI for AI-powered exercise guidance. Designed a modular, responsive UI with Nativewind and deployed to iOS, Android, and web via EAS.',
     imageUrl: 'https://picsum.photos/seed/taskapp/600/400',
-    imageHint: 'task manager interface',
-    tags: ['React', 'Firebase', 'Material UI', 'Node.js'],
-    liveDemoUrl: '#',
+    imageHint: 'fitness app interface',
+    tags: ['React Native', 'JavaScript', 'Nativewind', 'Expo', 'TypeScript', 'Sanity.io', 'Clerk', 'OpenAI'],
+    // liveDemoUrl: '#',
+    repoUrl: 'https://github.com/DipakPatil007/fitness-app-expo-react-native-starter-nativewind-typescript',
   },
   {
     id: 'proj3',
-    title: 'Portfolio Website V1',
-    description: 'My previous personal portfolio website built with vanilla HTML, CSS, and JS.',
+    title: 'Github Followers',
+    description: 'Built an iOS app using UIKit and the MVVM design pattern, integrating the GitHub REST API to display user profiles, repositories, followers, and following lists. Features include dynamic user search, lazy- loaded lists using UITableView, image caching for efficient performance, and smooth navigation through user details.Ensured modular architecture with reusable components and clean separation of concerns',
     imageUrl: 'https://picsum.photos/seed/portfolio/600/400',
     imageHint: 'portfolio design',
-    tags: ['HTML', 'CSS', 'JavaScript'],
-    repoUrl: '#',
+    tags: ['Swift', 'UIKit', 'Storyboard', 'MVVM'],
+    repoUrl: 'https://github.com/DipakPatil007/GitHubFollowers',
   },
   {
     id: 'proj4',
-    title: 'AI Powered Blog Generator',
-    description: 'A platform that uses generative AI to help users create blog posts.',
+    title: 'Smart Spend Application',
+    description: 'Built an application using Next.js and taildwind css',
     imageUrl: 'https://picsum.photos/seed/aiblog/600/400',
     imageHint: 'AI writing tool',
-    tags: ['Python', 'Flask', 'OpenAI API', 'React'],
+    tags: ['Next.js', 'TypeScript', 'Tailwind css'],
+    // liveDemoUrl: '#',
+    repoUrl: '#',
+  },
+  {
+    id: 'proj5',
+    title: 'Expense App',
+    description: 'Built an React native and Expo application to track the monthly expenses using Expo framework, Nativewind css and NeonDatabase for Postgre Sql and backend in express.js',
+    imageUrl: 'https://picsum.photos/seed/aiblog/600/400',
+    imageHint: 'expense ',
+    tags: ['React Native', 'Expo framework', 'Nativewind css', 'NeonDB', 'Express.js', 'Clerk Authention'],
     liveDemoUrl: '#',
     repoUrl: '#',
   },
@@ -68,7 +79,7 @@ export default function ProjectShowcase() {
               </div>
               <CardHeader>
                 <CardTitle>{project.title}</CardTitle>
-                <CardDescription className="h-16 overflow-hidden text-ellipsis">{project.description}</CardDescription>
+                <CardDescription className="h-30 overflow-hidden text-ellipsis">{project.description}</CardDescription>
               </CardHeader>
               <CardContent className="flex-grow">
                 <div className="flex flex-wrap gap-2">
