@@ -13,7 +13,7 @@ const projectsData: Project[] = [
     description: 'Developed a robust online interview platform using MERN stack and Socket.io, featuring seamless live video calling, real-time collaborative code editor with instant synchronization, live code compilation for immediate feedback, secure user authentication and session management, interview scheduling with automated email notifications.',
     imageUrl: 'https://picsum.photos/seed/ecomm/600/400',
     imageHint: 'interview platform interface',
-    tags: ['React.js', 'Node.js', 'MongoDB', 'express', 'Tailwind CSS', 'Socket.io'],
+    tags: ['React.js', 'Node.js', 'MongoDB', 'Express.js', 'Tailwind CSS', 'Socket.io'],
     // liveDemoUrl: '#',
     repoUrl: 'https://github.com/DipakPatil007/Online-Interview-Assessment-main',
   },
